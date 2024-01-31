@@ -23,3 +23,9 @@ body {
     width: 75%;
     margin: 10% auto;
 }
+
+#landing-page-img {
+    /* Give space around image and center it inside the div */
+    width: 90%;
+    align-self: center;
+}
