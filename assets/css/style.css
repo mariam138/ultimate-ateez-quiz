@@ -56,9 +56,9 @@ h1, h2 {
 #landing-page-img {
 
     /* Give space around image and center it inside the div */
-    width: 90%;
+    width: 300px;
     align-self: center;
-    border: 1px solid black;
+    padding: 0 5%;
 }
 
 #buttons-div {
