@@ -11,3 +11,15 @@ body {
     display: flex;
     justify-content: center;
 }
+
+#quiz-area {
+    /* Make elements appear stacked underneath each other */
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-shadow: 5px 5px 10px;
+    width: 75%;
+    margin: 10% auto;
+}
