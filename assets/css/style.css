@@ -61,6 +61,11 @@ h1, h2 {
     padding: 0 5%;
 }
 
+#quiz-area > hr {
+    border: solid 1px black;
+    margin: 0 5% 5%;
+}
+
 #buttons-div {
     padding: 0 10px 15px;
     display: flex;
