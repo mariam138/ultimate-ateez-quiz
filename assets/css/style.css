@@ -28,17 +28,16 @@ h2 {
     font-size: 1.7rem;
 }
 
-p {
-    padding: 0 10px 10px;
-    font-size: 1.25rem;
-    letter-spacing: 0.5px;
-}
-
-
 h1, h2 {
     font-family: "Averia Sans Libre", sans-serif;
     text-align: center;
     padding: 10px;
+}
+
+p {
+    padding: 0 10px 10px;
+    font-size: 1.25rem;
+    letter-spacing: 0.5px;
 }
 
 #quiz-area {
@@ -46,7 +45,7 @@ h1, h2 {
     /* Make elements appear stacked underneath each other */
     display: flex;
     flex-direction: column;
-    background: white;
+    background: rgba(255, 255, 255, 0.8);
     border: 1px solid black;
     border-radius: 4px;
     box-shadow: 5px 5px 10px;
@@ -91,4 +90,11 @@ h1, h2 {
 .button {
     color: black;
     background-color: #FAD732;
+}
+
+/* Media query for tablet sizes and up */
+@media screen and (min-width: 768px) {
+    body{
+        background-image: url(../images/ateez-illusion-image.webp);
+    }
 }
