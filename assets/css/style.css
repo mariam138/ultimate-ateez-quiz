@@ -10,7 +10,7 @@
 
 body {
     /* Move image to bottom of screen and have matching background colour */
-    background: #76F9FB url(../images/ateez-illusion-image-700w.webp) no-repeat 0 200% / 100%;
+    background: #76F9FB url(../images/ateez-illusion-image-700w.webp) no-repeat 0 155% / 100%;
     /* To make elements centred in page  */
     display: flex;
     justify-content: center;
@@ -59,4 +59,31 @@ h1, h2 {
     width: 90%;
     align-self: center;
     border: 1px solid black;
+}
+
+#buttons-div {
+    padding: 0 10px 15px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#start-button, .button {
+    font-size: 1.1rem;
+    font-family: "Nunito sans", sans-serif;
+    font-weight: 600;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 4px;
+    transition: ease 1s;
+    box-shadow: 2px 2px 5px;
+}
+
+#start-button {
+    color: black;
+    background-color: #76F9FB;
+}
+
+.button {
+    color: black;
+    background-color: #FAD732;
 }
