@@ -6,10 +6,8 @@
 }
 
 body {
-    /* background: url('../images/ateez-illusion-image-700w.webp') #76F9FB no-repeat center center / cover; */
-    background-image: url('../images/ateez-illusion-image-700w.webp');
-    background-color: #76F9FB;
-    background-repeat: no-repeat;
+    /* Move image to bottom of screen and have matching background colour */
+    background: #76F9FB url(../images/ateez-illusion-image-700w.webp) no-repeat 0 200% / 100%;
     /* To make elements centred in page  */
     display: flex;
     justify-content: center;
@@ -17,6 +15,7 @@ body {
 }
 
 #quiz-area {
+
     /* Make elements appear stacked underneath each other */
     display: flex;
     flex-direction: column;
@@ -24,11 +23,11 @@ body {
     border: 1px solid black;
     border-radius: 4px;
     box-shadow: 5px 5px 10px;
-    width: 75%;
-    margin: 10% auto;
+    margin: 10%;
 }
 
 #landing-page-img {
+
     /* Give space around image and center it inside the div */
     width: 90%;
     align-self: center;
