@@ -16,9 +16,29 @@ body {
     justify-content: center;
     align-items: baseline;
     font-family: "Nunito Sans", sans-serif;
+    text-align: center;
 }
+
+/* General font styling */
+h1 {
+    font-size: 2.2rem;
+}
+
+h2 {
+    font-size: 1.7rem;
+}
+
+p {
+    padding: 0 10px 10px;
+    font-size: 1.25rem;
+    letter-spacing: 0.5px;
+}
+
+
 h1, h2 {
     font-family: "Averia Sans Libre", sans-serif;
+    text-align: center;
+    padding: 10px;
 }
 
 #quiz-area {
@@ -38,4 +58,5 @@ h1, h2 {
     /* Give space around image and center it inside the div */
     width: 90%;
     align-self: center;
+    border: 1px solid black;
 }
