@@ -9,8 +9,6 @@
 }
 
 body {
-    /* Move image to bottom of screen and have matching background colour */
-    background: #76F9FB url(../images/ateez-illusion-image-700w.webp) no-repeat 0 155% / 100%;
     /* To make elements centred in page  */
     display: flex;
     justify-content: center;
@@ -38,6 +36,13 @@ p {
     padding: 0 10px 10px;
     font-size: 1.25rem;
     letter-spacing: 0.5px;
+}
+
+#bg-image-div {
+    /* Move image to bottom of screen and have matching background colour */
+    width: 100vw;
+    height: 100vh;
+    background: #76f9fb url(../images/ateez-illusion-image-700w.webp) no-repeat 0 bottom / 100%;
 }
 
 #quiz-area {
@@ -94,7 +99,8 @@ p {
 
 /* Media query for tablet sizes and up */
 @media screen and (min-width: 768px) {
-    body{
+    #bg-image-div {
         background-image: url(../images/ateez-illusion-image.webp);
+        background-position: top;
     }
 }
