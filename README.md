@@ -93,3 +93,7 @@ Deployment of the project took place early on, once the HTML and CSS for the hom
 5. These settings were saved and the website was deployed after a few minutes, with a link being provided at the top of the page.
 
 ## Credits
+
+### Code
+
+- Code to create modals is adapted from [W3 Schools](https://www.w3schools.com/howto/howto_css_modals.asp)
