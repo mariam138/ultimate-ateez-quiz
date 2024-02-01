@@ -98,6 +98,17 @@ p {
     background-color: #FAD732;
 }
 
+/* Modal styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
 /* Media query for tablet sizes and up */
 @media screen and (min-width: 768px) {
     #bg-image-div {
