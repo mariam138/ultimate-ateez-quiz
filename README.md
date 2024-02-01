@@ -20,10 +20,15 @@ These colours were checked for accessibility using [EightShapes](https://contras
 
 ![Screenshot 2024-02-01 at 13 25 14](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/e2e25444-e59b-46ba-b1c9-912d7f2da132)
 
-The two colours passed with AAA on both black and white, so I decided to use those colours overall for my colour scheme, keeping the blue and yellow for highlights.
-
+The two colours passed with AAA on a black background and vice versa, so I decided to use those colours overall for my colour scheme, keeping the blue and yellow for highlights.
 
 ### Typography
+
+For the main title, I wanted a fun font that was similar to handwriting, but still readable for accessibility. For this, I chose the "Averia Sans Libre" font. To find a font to match it, I used [Fontjoy](https://fontjoy.com/).
+
+![Screenshot 2024-01-31 at 20 11 23](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/e81be6e4-7339-425d-b9be-0af98d3b1aa3)
+
+Fontjoy generated the font "Nunito Sans" which I have decided to use as my paragraph and question text for my quiz.
 
 ### Wireframes
 
