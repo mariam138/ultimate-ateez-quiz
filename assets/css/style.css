@@ -108,6 +108,14 @@ p {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+/* Styling of instructions modal content */
+#instructions-modal {
+    background-color: white;
+    color: black;
+    text-align: center;
+    border: 1px solid black;
+    width: 80%;
+}
 
 /* Media query for tablet sizes and up */
 @media screen and (min-width: 768px) {
