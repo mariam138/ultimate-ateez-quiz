@@ -91,11 +91,13 @@ p {
 #start-button {
     color: black;
     background-color: #5BCCED;
+    margin: 5%;
 }
 
 .button {
     color: black;
     background-color: #FAD732;
+    margin: 5%;
 }
 
 /* Modal styling */
@@ -117,6 +119,7 @@ p {
     color: black;
     text-align: center;
     border: 1px solid black;
+    border-radius: 4px;
 }
 
 /* Media query for tablet sizes and up */
