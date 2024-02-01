@@ -54,7 +54,7 @@ p {
     border: 1px solid black;
     border-radius: 4px;
     box-shadow: 5px 5px 10px;
-    margin: 10%;
+    margin: 5% 15%;
 }
 
 /* To keep image within the div */
@@ -65,7 +65,7 @@ p {
 
 #quiz-area > hr {
     border: solid 1px black;
-    margin: 0 5% 5%;
+    margin: 2% 5%;
 }
 
 /* To allow buttons to remain in a row for responsive design */
@@ -88,7 +88,7 @@ p {
 
 #start-button {
     color: black;
-    background-color: #76F9FB;
+    background-color: #5BCCED;
 }
 
 .button {
@@ -105,6 +105,15 @@ p {
 
     /* Make the landing page image take up less space on larger screens  */
     #landing-page-image > img {
-        width: 60%;
+        width: 50%;
+    }
+
+    #start-button:hover {
+        background-color: #76f9fb;
+    }
+
+    .button:hover {
+        color: #faf932;
+        background-color: black;
     }
 }
