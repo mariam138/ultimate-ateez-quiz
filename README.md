@@ -24,13 +24,33 @@ The two colours passed with AAA on a black background and vice versa, so I decid
 
 ### Typography
 
-For the main title, I wanted a fun font that was similar to handwriting, but still readable for accessibility. For this, I chose the "Averia Sans Libre" font. To find a font to match it, I used [Fontjoy](https://fontjoy.com/).
+For the main title, I wanted a fun font that was similar to handwriting, but still readable for accessibility. For this, I chose the **"Averia Sans Libre"** font. To find a font to match it, I used [Fontjoy](https://fontjoy.com/).
 
 ![Screenshot 2024-01-31 at 20 11 23](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/e81be6e4-7339-425d-b9be-0af98d3b1aa3)
 
-Fontjoy generated the font "Nunito Sans" which I have decided to use as my paragraph and question text for my quiz.
+Fontjoy generated the font **"Nunito Sans"** which I have decided to use as my paragraph and question text for my quiz.
 
 ### Wireframes
+
+To produce wireframes for the quiz, I used Balsamiq. The wireframes helped me have a basic idea of the setup I wanted for my quiz, although the aim was to keep it all on one page. I made wireframes for both mobile and desktop for the home page, the quiz itself and the score page at the end.
+
+#### Landing Page
+
+![quiz landing page desktop](https://github.com/mariam138/legacy-of-dubai/assets/150139337/ff8b8d12-5301-435d-8efd-1b41fb36469d)
+
+![quiz phone landing page](https://github.com/mariam138/legacy-of-dubai/assets/150139337/5c352214-d20a-407c-aabd-4405f3d8f9be)
+
+#### Quiz Page
+
+![quiz question page](https://github.com/mariam138/legacy-of-dubai/assets/150139337/1fa4c456-8f92-41c4-8f74-97d82c0b841a)
+
+![quiz phone question page](https://github.com/mariam138/legacy-of-dubai/assets/150139337/b657155e-2c99-43b0-9299-f5d6d36c2e1d)
+
+#### Final Score Page
+
+![quiz score page](https://github.com/mariam138/legacy-of-dubai/assets/150139337/b19bfa70-69c6-4477-b7bd-e7529dba0574)
+
+![quiz phone score page](https://github.com/mariam138/legacy-of-dubai/assets/150139337/63bbf992-0b9a-41f6-b852-5bcfb20ec133)
 
 ## Features
 
