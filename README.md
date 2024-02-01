@@ -66,6 +66,12 @@ On larger screens, hovering the mouse over the buttons will change their colour 
 ![Screenshot 2024-02-01 at 13 56 37](https://github.com/mariam138/legacy-of-dubai/assets/150139337/b068d58b-2eca-429d-9208-1c4f1d602cc4)
 ![Screenshot 2024-02-01 at 13 56 40](https://github.com/mariam138/legacy-of-dubai/assets/150139337/86b1ad52-e9d1-492a-8b51-7100eb771cbf)
 
+When clicking on the **"Instructions"** button, a modal appears explaining briefly how the game will work.
+
+![Screenshot 2024-02-01 at 18 11 09](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/7438cc86-5e0c-4ecb-86cf-327d2d97b601)
+
+Clicking the **"Back"** button will close the modal and return back to the home page. 
+
 ### Future Features
 
 ## Testing
