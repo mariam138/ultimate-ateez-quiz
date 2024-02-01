@@ -73,6 +73,8 @@ p {
     padding: 0 10px 15px;
     display: flex;
     justify-content: space-evenly;
+    /* Allow buttons to wrap around each other on smaller screens */
+    flex-wrap: wrap;
 }
 
 #start-button, .button {
@@ -101,6 +103,23 @@ p {
     #bg-image-div {
         background-image: url(../images/ateez-illusion-image.webp);
         background-position: top;
+    }
+    
+    /* Make fonts larger on larger screens */
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2.3rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    #start-button, .button {
+        font-size: 1.3rem;
     }
 
     /* Make the landing page image take up less space on larger screens  */
