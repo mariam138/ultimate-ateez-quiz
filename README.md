@@ -80,6 +80,16 @@ On larger screens, hovering the mouse over the buttons will change their colour 
 
 ## Technologies Used
 
+To create the wireframes, **Balsamiq** was used.
+
 ## Deployment
+
+Deployment of the project took place early on, once the HTML and CSS for the home page had been set up. Deployment took place as follows:
+
+1. The GitHub page for the website was loaded
+2. The **Settings** tab was clicked, located in the top right corner.
+3. From the **Settings** page, on the left-hand side the **Pages** tab was clicked from the menu.
+4. Under the **Branch** section, the page was selected to be made from the **main** branch followed by the **root** folder.
+5. These settings were saved and the website was deployed after a few minutes, with a link being provided at the top of the page.
 
 ## Credits
