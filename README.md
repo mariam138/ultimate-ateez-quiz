@@ -54,6 +54,18 @@ To produce wireframes for the quiz, I used Balsamiq. The wireframes helped me ha
 
 ## Features
 
+### Home Page
+
+The home page features a group picture of ateez as the background with a bright blue plain background which fits in with the colour scheme. Underneath the title quiz is another group picture of Ateez, which is responsive. Underneath the picture is the tagline **"How well do you know Ateez?"**, followed by some more paragraph text. Underneath the text there are three buttons: one to start the quiz, one for the instructions on how the quiz works and lastly one to change the settings of the game. 
+
+![Screenshot 2024-02-01 at 13 53 25](https://github.com/mariam138/legacy-of-dubai/assets/150139337/5018700b-191c-49fe-9879-acc50071cc3d)
+
+On larger screens, hovering the mouse over the buttons will change their colour with a slight transition. The blue **"Start!"** button will change into a lighter blue, while the **"Instructions"** and **"Settings"** buttons change their background colour to black and the text to yellow. This is to indicate clickability, but also to separate the **"Start!"** button from the others visually, to indicate it has a different action. 
+
+![Screenshot 2024-02-01 at 13 56 30](https://github.com/mariam138/legacy-of-dubai/assets/150139337/bd2a3ba0-3cd5-4829-96db-d0e275f0da04)
+![Screenshot 2024-02-01 at 13 56 37](https://github.com/mariam138/legacy-of-dubai/assets/150139337/b068d58b-2eca-429d-9208-1c4f1d602cc4)
+![Screenshot 2024-02-01 at 13 56 40](https://github.com/mariam138/legacy-of-dubai/assets/150139337/86b1ad52-e9d1-492a-8b51-7100eb771cbf)
+
 ### Future Features
 
 ## Testing
