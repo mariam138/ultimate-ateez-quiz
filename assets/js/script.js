@@ -37,3 +37,11 @@ settingsModalButton.onclick = function () {
 backButtonTwo.onclick = function () {
     settingsModal.style.display = "none";
 }
+
+function loadQuiz () {
+    const quizArea = document.getElementById('quiz-area');
+    quizArea.innerHTML = "";
+}
+
+let startButton = document.getElementById('start-button');
+startButton.addEventListener('click', loadQuiz);

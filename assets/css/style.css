@@ -45,7 +45,7 @@ p {
     background: #76f9fb url(../images/ateez-illusion-image-700w.webp) no-repeat 0 bottom / 100%;
 }
 
-#quiz-area {
+#quiz-area, #question-area {
 
     /* Make elements appear stacked underneath each other */
     display: flex;
@@ -115,7 +115,7 @@ p {
     backdrop-filter: blur(2px);
 }
 
-/* Styling of instructions modal content */
+/* Styling of modal content */
 .modal-content {
     background-color: white;
     color: black;
