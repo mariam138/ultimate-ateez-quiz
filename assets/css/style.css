@@ -111,6 +111,8 @@ p {
     left: 0;
     padding: 100px 10%;
     background-color: rgba(0, 0, 0, 0.5);
+    /* Allows background to be blurred when modal is opened */
+    backdrop-filter: blur(2px);
 }
 
 /* Styling of instructions modal content */
