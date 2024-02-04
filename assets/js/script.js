@@ -56,7 +56,8 @@ function loadQuiz () {
 }
 
 function createOptions () {
-    let optionsArea = document.getElementById('options-area').innerHTML; // Gets options area div from HTML
+    let optionsArea = document.getElementById('options-area');
+    console.log(optionsArea) // Gets options area div from HTML
     let optionButton = document.createElement('button');
     optionButton.textContent = "hi";
     optionsArea.appendChild(optionButton);  
@@ -167,10 +168,10 @@ let questions = [{
 let score = 0 + "/20";
 
 /** Increment the score each time the correct answer is clicked */
-function incrementScore() {
-    if (options === correctAnswer) {
-        ++score;
-    }
-}
+// function incrementScore() {
+//     if (options === correctAnswer) {
+//         ++score;
+//     }
+// }
 
-incrementScore();
+//incrementScore();

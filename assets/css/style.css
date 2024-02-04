@@ -45,7 +45,7 @@ p {
     background: #76f9fb url(../images/ateez-illusion-image-700w.webp) no-repeat 0 bottom / 100%;
 }
 
-#quiz-area, #question-area {
+.container {
 
     /* Make elements appear stacked underneath each other */
     display: flex;
@@ -124,10 +124,10 @@ p {
     border-radius: 4px;
 }
 
-/* Hides the question area div by default */
+/* Hides the question area div by default
 #question-area {
     display: none;
-}
+} */
 
 /* Media query for tablet sizes and up */
 @media screen and (min-width: 768px) {
