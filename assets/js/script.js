@@ -44,10 +44,13 @@ startButton.addEventListener('click', loadQuiz);
 
 /** When the start button is pressed
  * this function will load the quiz in the
- * quiz area
+ * question area
  */
 function loadQuiz () {
+    let quizArea = document.getElementById('quiz-area');
+    quizArea.style.display = "none";
     let questionArea = document.getElementById('question-area');
+    questionArea.style.display = "block";
     questionArea.innerHTML = `<h1>Question 1</h1>
     <h2>${questions[0].question}</h2>`;
 
