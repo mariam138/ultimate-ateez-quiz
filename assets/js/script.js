@@ -47,10 +47,14 @@ startButton.addEventListener('click', loadQuiz);
  * question area
  */
 function loadQuiz () {
+    // Hide content of the quiz area div
     let quizArea = document.getElementById('quiz-area');
     quizArea.style.display = "none";
+
+    // Display the question area div
     let questionArea = document.getElementById('question-area');
     questionArea.style.display = "flex";
+    // Set up HTML for the question area div
     questionArea.innerHTML = `<h1>Question 1</h1>
     <h2>${questions[0].question}</h2>`;
 
