@@ -71,11 +71,14 @@ function createOptions () {
 
     // Redeclare the options area variable due to block scope
     let optionsArea = document.getElementById('options-area');
+    // Displays option buttons in a column
+    optionsArea.style.display = "flex";
+    optionsArea.style.flexDirection = "column";
  
     // Creates 3 button elements with the options listed in the options key in the questions array
     for (i = 0; i < 3; i++){
         let optionButton = document.createElement('button'); // Create buttons in div
-        optionButton.classList.add('button');
+        optionButton.classList.add('button'); // Adds button styling to each option button
         optionButton.textContent = `${questions[0].options[i]}`;
         optionsArea.appendChild(optionButton); 
     } 
