@@ -47,8 +47,8 @@ startButton.addEventListener('click', loadQuiz);
  * quiz area
  */
 function loadQuiz () {
-    let quizArea = document.getElementById('quiz-area');
-    quizArea.innerHTML = `<h1>Question 1</h1>
+    let questionArea = document.getElementById('question-area');
+    questionArea.innerHTML = `<h1>Question 1</h1>
     <h2>${questions[0].question}</h2>`;
 
     createOptions();

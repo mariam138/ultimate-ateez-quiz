@@ -57,6 +57,10 @@ p {
     margin: 5% 15%;
 }
 
+.hidden {
+    display: none; /* Displays any element with this class as hidden by default */
+}
+
 /* To keep image within the div */
 #landing-page-image > img {
     width: 85%;
