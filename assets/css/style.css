@@ -128,10 +128,13 @@ p {
     border-radius: 4px;
 }
 
-/* Hides the question area div by default
-#question-area {
-    display: none;
-} */
+/* Styling of the option buttons */
+.options-button {
+    color: black;
+    background-color: #FAD732;
+    margin: 3%;
+    width: 70%;
+}
 
 /* Media query for tablet sizes and up */
 @media screen and (min-width: 768px) {
