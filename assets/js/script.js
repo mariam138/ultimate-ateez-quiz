@@ -74,6 +74,7 @@ function createOptions () {
     // Displays option buttons in a column
     optionsArea.style.display = "flex";
     optionsArea.style.flexDirection = "column";
+    optionsArea.style.alignItems = "center";
  
     // Creates 3 button elements with the options listed in the options key in the questions array
     for (i = 0; i < 3; i++){
