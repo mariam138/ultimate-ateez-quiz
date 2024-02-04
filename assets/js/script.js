@@ -38,17 +38,20 @@ backButtonTwo.onclick = function () {
     settingsModal.style.display = "none";
 }
 
+let startButton = document.getElementById('start-button');
+startButton.addEventListener('click', loadQuiz);
+
 /** When the start button is pressed
  * this function will load the quiz in the
  * quiz area
  */
 function loadQuiz () {
     let quizArea = document.getElementById('quiz-area');
-    quizArea.innerHTML = "";
+    quizArea.innerHTML = `<h1>Question 1</h1>
+    <h2>${questions[currentQuestion].question}</h2>`;
 }
 
-let startButton = document.getElementById('start-button');
-startButton.addEventListener('click', loadQuiz);
+let currentQuestion = 0;
 
 let questions = [{
     question: "What is Ateez's debut date?",
