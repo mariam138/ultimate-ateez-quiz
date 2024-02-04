@@ -86,6 +86,7 @@ function createOptions () {
     } 
 }
 
+//Questions, options and their correct answers for the quiz
 let questions = [{
     question: "What is Ateez's debut date?",
     options: ["24th October 2018", "17th November 2018", "23rd March 2018"],
