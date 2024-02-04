@@ -55,7 +55,8 @@ function loadQuiz () {
     let questionArea = document.getElementById('question-area');
     questionArea.style.display = "flex";
     // Set up HTML for the question area div
-    questionArea.innerHTML = `<h1>Question 1</h1>
+    let currentQuestion = 1;
+    questionArea.innerHTML = `<h1>Question ${currentQuestion}</h1>
     <h2>${questions[0].question}</h2>`;
 
     // Create options area div for the answer buttons
@@ -84,8 +85,6 @@ function createOptions () {
         optionsArea.appendChild(optionButton); 
     } 
 }
-
-// let currentQuestion = 0;
 
 let questions = [{
     question: "What is Ateez's debut date?",
