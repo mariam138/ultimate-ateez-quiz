@@ -42,12 +42,6 @@ backButtonTwo.onclick = function () {
 let startButton = document.getElementById('start-button');
 startButton.addEventListener('click', loadQuiz);
 
-function createOptions () {
-    let optionButton = document.createElement('button');
-    optionButton.textContent = "hi";
-    optionsArea.appendChild(optionButton);  
-}
-
 /** When the start button is pressed
  * this function will load the quiz in the
  * question area
@@ -67,6 +61,13 @@ function loadQuiz () {
 
     createOptions();
 
+}
+
+function createOptions () {
+    let optionsArea = document.getElementById('options-area');
+    let optionButton = document.createElement('button');
+    optionButton.textContent = "hi";
+    optionsArea.appendChild(optionButton);  
 }
 
 // let currentQuestion = 0;
