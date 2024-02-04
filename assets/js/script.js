@@ -58,9 +58,9 @@ function loadQuiz () {
     questionArea.innerHTML = `<h1>Question 1</h1>
     <h2>${questions[0].question}</h2>`;
 
+    // Create options area div for the answer buttons
     let optionsArea = document.createElement('div');
     optionsArea.setAttribute('id', 'options-area');
-    console.log(optionsArea);
     questionArea.appendChild(optionsArea);
 
     createOptions();
@@ -68,8 +68,10 @@ function loadQuiz () {
 }
 
 function createOptions () {
+
+    // Redeclare the options area variable due to block scope
     let optionsArea = document.getElementById('options-area');
-    let optionButton = document.createElement('button');
+    let optionButton = document.createElement('button'); // Create buttons in div
     optionButton.textContent = "hi";
     optionsArea.appendChild(optionButton);  
 }
