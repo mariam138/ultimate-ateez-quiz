@@ -42,6 +42,12 @@ backButtonTwo.onclick = function () {
 let startButton = document.getElementById('start-button');
 startButton.addEventListener('click', loadQuiz);
 
+function createOptions () {
+    let optionButton = document.createElement('button');
+    optionButton.textContent = "hi";
+    optionsArea.appendChild(optionButton);  
+}
+
 /** When the start button is pressed
  * this function will load the quiz in the
  * question area
@@ -50,20 +56,17 @@ function loadQuiz () {
     let quizArea = document.getElementById('quiz-area');
     quizArea.style.display = "none";
     let questionArea = document.getElementById('question-area');
-    questionArea.style.display = "block";
+    questionArea.style.display = "flex";
     questionArea.innerHTML = `<h1>Question 1</h1>
     <h2>${questions[0].question}</h2>`;
 
+    let optionsArea = document.createElement('div');
+    optionsArea.setAttribute('id', 'options-area');
+    console.log(optionsArea);
+    questionArea.appendChild(optionsArea);
+
     createOptions();
 
-}
-
-function createOptions () {
-    let optionsArea = document.getElementById('options-area');
-    console.log(optionsArea) // Gets options area div from HTML
-    let optionButton = document.createElement('button');
-    optionButton.textContent = "hi";
-    optionsArea.appendChild(optionButton);  
 }
 
 // let currentQuestion = 0;

@@ -108,6 +108,8 @@ Deployment of the project took place early on, once the HTML and CSS for the hom
 
     After moving the `options-area` div inside the `quiz-area` div, then an error was thrown stating that the element with the id `options-area` was undefined. This turned out to be because I had set the 'innerHTML' iin the javascript, overwriting the `options-area` I had created in the HTML originally. To fix this, I created separate divs that would appear underneath the `quiz-area` div, and created a function that would show these divs when the quiz was loaded.
 
+2. Continuning on from the last bug fix, I then ran into an error when creating the `options-area` div as part of the `createOptions` function where the console was throwing a **"Reference Error"** stating that `optionsArea` had not been defined. After some googling on what a **Reference Error** means, I found that I had to re-declare the `optionsArea` valuable in the `createOptions` function due to its block scope.
+
 ## Credits
 
 ### Code
