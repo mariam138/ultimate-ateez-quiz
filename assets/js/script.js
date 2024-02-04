@@ -186,14 +186,3 @@ let questions = [{
     options: ["Yunho", "San", "Jongho"],
     correctAnswer: "San"
 }];
-
-let score = 0 + "/20";
-
-/** Increment the score each time the correct answer is clicked */
-// function incrementScore() {
-//     if (options === correctAnswer) {
-//         ++score;
-//     }
-// }
-
-//incrementScore();

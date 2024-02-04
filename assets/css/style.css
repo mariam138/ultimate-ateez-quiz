@@ -88,7 +88,7 @@ p {
     border: 1px solid black;
     padding: 5px;
     border-radius: 4px;
-    transition: ease 1s;
+    transition: ease 0.7s;
     box-shadow: 2px 2px 5px;
 }
 
