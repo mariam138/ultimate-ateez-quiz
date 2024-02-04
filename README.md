@@ -106,6 +106,8 @@ Deployment of the project took place early on, once the HTML and CSS for the hom
 
 ![Screenshot 2024-02-04 at 12 47 17](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/b518e577-6849-464d-b321-421c00123264)
 
+    After moving the `options-area` div inside the `quiz-area` div, then an error was thrown stating that the element with the id `options-area` was undefined.
+
 ## Credits
 
 ### Code

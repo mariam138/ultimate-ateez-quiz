@@ -38,6 +38,7 @@ backButtonTwo.onclick = function () {
     settingsModal.style.display = "none";
 }
 
+// When the start button is pressed, the loadQuiz function is called
 let startButton = document.getElementById('start-button');
 startButton.addEventListener('click', loadQuiz);
 
@@ -55,12 +56,10 @@ function loadQuiz () {
 }
 
 function createOptions () {
-    let optionsArea = document.getElementById('options-area'); // Gets options area div from HTML
+    let optionsArea = document.getElementById('options-area').innerHTML; // Gets options area div from HTML
     let optionButton = document.createElement('button');
-    optionButton.classList.add('.button');
     optionButton.textContent = "hi";
-    optionsArea.appendChild(optionButton);
-    
+    optionsArea.appendChild(optionButton);  
 }
 
 // let currentQuestion = 0;
@@ -163,4 +162,15 @@ let questions = [{
     question: "Who has been named as the ambassador of their local town, Namhae?",
     options: ["Yunho", "San", "Jongho"],
     correctAnswer: "San"
-}]
+}];
+
+let score = 0 + "/20";
+
+/** Increment the score each time the correct answer is clicked */
+function incrementScore() {
+    if (options === correctAnswer) {
+        ++score;
+    }
+}
+
+incrementScore();
