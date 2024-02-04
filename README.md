@@ -98,6 +98,14 @@ Deployment of the project took place early on, once the HTML and CSS for the hom
 4. Under the **Branch** section, the page was selected to be made from the **main** branch followed by the **root** folder.
 5. These settings were saved and the website was deployed after a few minutes, with a link being provided at the top of the page.
 
+## Bug Fixes
+
+1. When trying to create the options buttons for when the quiz started, the button was not showing in the HTML. However, it would show in the console when logged.
+
+![Screenshot 2024-02-04 at 12 44 50](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/eed1df59-6b8c-4d90-a1f7-92b6d6a66142)
+
+![Screenshot 2024-02-04 at 12 47 17](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/b518e577-6849-464d-b321-421c00123264)
+
 ## Credits
 
 ### Code

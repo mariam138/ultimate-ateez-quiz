@@ -48,10 +48,22 @@ startButton.addEventListener('click', loadQuiz);
 function loadQuiz () {
     let quizArea = document.getElementById('quiz-area');
     quizArea.innerHTML = `<h1>Question 1</h1>
-    <h2>${questions[currentQuestion].question}</h2>`;
+    <h2>${questions[0].question}</h2>`;
+
+    createOptions();
+
 }
 
-let currentQuestion = 0;
+function createOptions () {
+    let optionsArea = document.getElementById('options-area'); // Gets options area div from HTML
+    let optionButton = document.createElement('button');
+    optionButton.classList.add('.button');
+    optionButton.textContent = "hi";
+    optionsArea.appendChild(optionButton);
+    
+}
+
+// let currentQuestion = 0;
 
 let questions = [{
     question: "What is Ateez's debut date?",
