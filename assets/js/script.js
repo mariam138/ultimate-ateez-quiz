@@ -75,7 +75,8 @@ function createOptions () {
     // Creates 3 button elements with the options listed in the options key in the questions array
     for (i = 0; i < 3; i++){
         let optionButton = document.createElement('button'); // Create buttons in div
-        optionButton.textContent = `${questions[0].options[0]}`;
+        optionButton.classList.add('button');
+        optionButton.textContent = `${questions[0].options[i]}`;
         optionsArea.appendChild(optionButton); 
     } 
 }
