@@ -110,6 +110,23 @@ Deployment of the project took place early on, once the HTML and CSS for the hom
 
 2. Continuning on from the last bug fix, I then ran into an error when creating the `options-area` div as part of the `createOptions` function where the console was throwing a **"Reference Error"** stating that `optionsArea` had not been defined. After some googling on what a **Reference Error** means, I found that I had to re-declare the `optionsArea` valuable in the `createOptions` function due to its block scope.
 
+3. When creating the buttons which contained the options for each question, I made a for loop. However, my initial code led to three buttons being created with the same answer. 
+
+![Screenshot 2024-02-04 at 16 12 32](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/0bba9175-b13c-4a78-bfe5-fd151b61d6c3)
+
+My initial code was written as follows:  
+
+    for (i = 0; i < 3; i++){  
+
+        let optionButton = document.createElement('button');  
+
+        optionButton.textContent = ``${questions[0].options[0]}``;  
+
+        optionsArea.appendChild(optionButton); 
+    } 
+
+I realised that having the index for options as "0" was causing the loop to create three buttons with the first answer in the options array. Changing it to [i] allowed it to create three buttons each with three different options.
+
 ## Credits
 
 ### Code
