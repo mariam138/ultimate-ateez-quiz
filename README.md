@@ -127,7 +127,7 @@ My initial code was written as follows:
 
 I realised that having the index for options as "0" was causing the loop to create three buttons with the first answer in the options array. Changing it to [i] allowed it to create three buttons each with three different options.
 
-4. After creating the buttons, I wanted to add click events to them all to create a *"CheckAnswer"* function. When I declared the **"optionButtons"** variable outside of the **"createOptions"** function and logged the node list to the console, it gave a length of 0. I realised that this was because the separate option buttons were being created inside the function, giving them **function scope**. 
+4. After creating the buttons, I wanted to add click events to them all to create a *"CheckAnswer"* function. When I declared the **"optionButtons"** variable outside of the **"createOptions"** function and logged the node list to the console, it gave a length of 0. I realised that this was because the separate option buttons were being created inside the function, giving them **function scope**. By declaring **"optionButton"** as an empty variable *outside* the **"createOptions"** function, this allowed it to have a global scope. Logging the array of the option buttons to the console then worked, giving a length of 3.
 
 ## Credits
 
