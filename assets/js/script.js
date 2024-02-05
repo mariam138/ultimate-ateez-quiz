@@ -84,6 +84,7 @@ function createOptions () {
         optionButton.textContent = `${questions[0].options[i]}`;
         optionsArea.appendChild(optionButton); 
     } 
+
 }
 
 //Questions, options and their correct answers for the quiz
@@ -186,3 +187,14 @@ let questions = [{
     options: ["Yunho", "San", "Jongho"],
     correctAnswer: "San"
 }];
+
+let optionButtons = document.querySelectorAll('.options-button');
+console.log(optionButtons);
+
+// function checkAnswer () {
+//     console.log('click');
+// }
+
+// optionButtons.forEach((optionButton) => {
+//     optionButton.addEventListener('click', checkAnswer)
+// });
