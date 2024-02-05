@@ -68,6 +68,8 @@ function loadQuiz () {
 
 }
 
+let optionButton;
+
 function createOptions () {
 
     // Redeclare the options area variable due to block scope
@@ -79,7 +81,7 @@ function createOptions () {
  
     // Creates 3 button elements with the options listed in the options key in the questions array
     for (i = 0; i < 3; i++){
-        let optionButton = document.createElement('button'); // Create buttons in div
+        optionButton = document.createElement('button'); // Create buttons in div
         optionButton.classList.add('options-button'); // Adds button styling to each option button
         optionButton.textContent = `${questions[0].options[i]}`;
         optionsArea.appendChild(optionButton); 
@@ -188,7 +190,7 @@ let questions = [{
     correctAnswer: "San"
 }];
 
-let optionButtons = document.querySelectorAll('.options-button');
+let optionButtons = document.getElementsByClassName('options-button');
 console.log(optionButtons);
 
 // function checkAnswer () {
