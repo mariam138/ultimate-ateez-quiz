@@ -12,12 +12,12 @@ let backButtonOne = document.getElementsByClassName('back-button')[0];
 // Opens instructions modal when button is clicked
 instructionsModalButton.onclick = function () {
     instructionsModal.style.display = "block";
-}
+};
 
 // Closes instructions modal when back button is clicked
 backButtonOne.onclick = function () {
     instructionsModal.style.display = "none";
-}
+};
 
 // Get settings modal from DOM
 let settingsModal = document.getElementById('settings-modal');
@@ -31,12 +31,12 @@ let backButtonTwo = document.getElementsByClassName('back-button')[1];
 // Opens settings modal
 settingsModalButton.onclick = function () {
     settingsModal.style.display = "block";
-}
+};
 
 // Closes settings modal
 backButtonTwo.onclick = function () {
     settingsModal.style.display = "none";
-}
+};
 
 // When the start button is pressed, the loadQuiz function is called
 let startButton = document.getElementById('start-button');
@@ -59,26 +59,21 @@ function loadQuiz () {
     questionArea.innerHTML = `<h1>Question ${currentQuestion}</h1>
     <h2>${questions[0].question}</h2>`;
 
-    // // Create options area div for the answer buttons
-    // let optionsArea = document.createElement('div');
-    // optionsArea.setAttribute('id', 'options-area');
-    // questionArea.appendChild(optionsArea);
-
     createOptions();
 
 }
 
 let optionsArea = document.getElementById('options-area');
-let options = document.getElementsByClassName('options-button');
 let optionOne = document.getElementById('option-one');
 let optionTwo = document.getElementById('option-two');
 let optionThree = document.getElementById('option-three');
+let optionButtons = [optionOne, optionTwo, optionThree];
 
 function createOptions () {
 
     // Displays option buttons in a column
     optionsArea.style.display = "flex";
-    optionsArea.style.flexDirection = "column"; // add to css styles
+    optionsArea.style.flexDirection = "column";
     optionsArea.style.alignItems = "center";
  
     optionOne.innerHTML = `${questions[0].options[0]}`;
@@ -188,14 +183,20 @@ let questions = [{
     correctAnswer: "San"
 }];
 
-// Adds the same event listener to mulitple elements - adapted from https://fjolt.com/article/javascript-multiple-elements-addeventlistener
-let optionButtons = document.querySelectorAll('.options-button');
-let checkAnswer = () => {
-    console.log('click!')
-}
-
-optionButtons.forEach((optionButton) => {
-    optionButton.addEventListener('click', checkAnswer)
+// Adds the same event listener to mulitple elements
+// Adapted from https://fjolt.com/article/javascript-multiple-elements-addeventlistener
+optionsArea.addEventListener('click', (e) => {
+    if (e.target.classList.contains('options-button')) {
+        checkAnswer(e.target);
+    }
 });
 
-let questionArea = document.getElementById('question-area');
+function checkAnswer (clickedButton) {
+
+    if (clickedButton.innerText === questions[0].correctAnswer) {
+        clickedButton.classList.add('correct');
+    } else {
+        clickedButton.classList.add('incorrect');
+    }
+
+}
