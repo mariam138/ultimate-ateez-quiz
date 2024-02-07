@@ -197,8 +197,8 @@ optionButtons.forEach((optionButton) => {
     optionButton.addEventListener('click', checkAnswer)
 });
 
-// let questionArea = document.getElementById('question-area');
-// questionArea.addEventListener('click', console.log('hi'));
+let questionArea = document.getElementById('question-area');
+questionArea.addEventListener('click', console.log('hi'));
 // let optionsArea = document.querySelector('options-area');
 // optionsArea.addEventListener('click', (e) => {
 //     if (e.target.classList.contains('options-button')) {
