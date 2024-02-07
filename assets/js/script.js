@@ -59,21 +59,22 @@ function loadQuiz () {
     questionArea.innerHTML = `<h1>Question ${currentQuestion}</h1>
     <h2>${questions[0].question}</h2>`;
 
-    // Create options area div for the answer buttons
-    let optionsArea = document.createElement('div');
-    optionsArea.setAttribute('id', 'options-area');
-    questionArea.appendChild(optionsArea);
+    // // Create options area div for the answer buttons
+    // let optionsArea = document.createElement('div');
+    // optionsArea.setAttribute('id', 'options-area');
+    // questionArea.appendChild(optionsArea);
 
     createOptions();
 
 }
 
+let optionsArea = document.getElementById('options-area');
 let optionButton;
 
 function createOptions () {
 
-    // Redeclare the options area variable due to block scope
-    let optionsArea = document.getElementById('options-area');
+    // // Redeclare the options area variable due to block scope
+    // let optionsArea = document.getElementById('options-area');
     // Displays option buttons in a column
     optionsArea.style.display = "flex";
     optionsArea.style.flexDirection = "column";
@@ -191,12 +192,11 @@ let questions = [{
 }];
 
 let optionButtons = document.getElementsByClassName('options-button');
-console.log(optionButtons);
-
-// function checkAnswer () {
-//     console.log('click');
-// }
-
-// optionButtons.forEach((optionButton) => {
-//     optionButton.addEventListener('click', checkAnswer)
+let questionArea = document.getElementById('question-area');
+questionArea.addEventListener('click', console.log('hi'));
+// let optionsArea = document.querySelector('options-area');
+// optionsArea.addEventListener('click', (e) => {
+//     if (e.target.classList.contains('options-button')) {
+//         console.log("click!");
+//     }
 // });
