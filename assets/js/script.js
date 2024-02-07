@@ -82,15 +82,8 @@ function createOptions () {
     optionsArea.style.alignItems = "center";
  
     optionOne.innerHTML = `${questions[0].options[0]}`;
-    optionTwo.
-    // // Creates 3 button elements with the options listed in the options key in the questions array
-    // for (i = 0; i < 3; i++){
-    //     optionButton = options[i];
-    //     // optionButton = document.createElement('button'); // Create buttons in div
-    //     // optionButton.classList.add('options-button'); // Adds button styling to each option button
-    //     options.innerHTML = `${questions[0].options[i]}`;
-    //     // optionsArea.appendChild(optionButton); 
-    // } 
+    optionTwo.innerHTML = `${questions[0].options[1]}`;
+    optionThree.innerHTML = `${questions[0].options[2]}`;
 
 }
 
