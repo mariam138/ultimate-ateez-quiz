@@ -69,22 +69,28 @@ function loadQuiz () {
 }
 
 let optionsArea = document.getElementById('options-area');
-let optionButton;
+let options = document.getElementsByClassName('options-button');
+let optionOne = document.getElementById('option-one');
+let optionTwo = document.getElementById('option-two');
+let optionThree = document.getElementById('option-three');
 
 function createOptions () {
 
     // Displays option buttons in a column
     optionsArea.style.display = "flex";
-    optionsArea.style.flexDirection = "column";
+    optionsArea.style.flexDirection = "column"; // add to css styles
     optionsArea.style.alignItems = "center";
  
-    // Creates 3 button elements with the options listed in the options key in the questions array
-    for (i = 0; i < 3; i++){
-        optionButton = document.createElement('button'); // Create buttons in div
-        optionButton.classList.add('options-button'); // Adds button styling to each option button
-        optionButton.textContent = `${questions[0].options[i]}`;
-        optionsArea.appendChild(optionButton); 
-    } 
+    optionOne.innerHTML = `${questions[0].options[0]}`;
+    optionTwo.
+    // // Creates 3 button elements with the options listed in the options key in the questions array
+    // for (i = 0; i < 3; i++){
+    //     optionButton = options[i];
+    //     // optionButton = document.createElement('button'); // Create buttons in div
+    //     // optionButton.classList.add('options-button'); // Adds button styling to each option button
+    //     options.innerHTML = `${questions[0].options[i]}`;
+    //     // optionsArea.appendChild(optionButton); 
+    // } 
 
 }
 
