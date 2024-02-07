@@ -188,19 +188,14 @@ let questions = [{
     correctAnswer: "San"
 }];
 
+// Adds the same event listener to mulitple elements - adapted from https://fjolt.com/article/javascript-multiple-elements-addeventlistener
 let optionButtons = document.querySelectorAll('.options-button');
 let checkAnswer = () => {
     console.log('click!')
 }
+
 optionButtons.forEach((optionButton) => {
     optionButton.addEventListener('click', checkAnswer)
 });
 
 let questionArea = document.getElementById('question-area');
-questionArea.addEventListener('click', console.log('hi'));
-// let optionsArea = document.querySelector('options-area');
-// optionsArea.addEventListener('click', (e) => {
-//     if (e.target.classList.contains('options-button')) {
-//         console.log("click!");
-//     }
-// });

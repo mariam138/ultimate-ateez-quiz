@@ -134,3 +134,4 @@ I realised that having the index for options as "0" was causing the loop to crea
 ### Code
 
 - Code to create modals is adapted from [W3 Schools](https://www.w3schools.com/howto/howto_css_modals.asp)
+- Code to add listener events to multiple elements simultaneously is adaptedd from [fjolt.com](https://fjolt.com/article/javascript-multiple-elements-addeventlistener)
