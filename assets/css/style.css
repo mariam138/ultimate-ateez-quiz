@@ -144,6 +144,15 @@ p {
     width: 70%;
 }
 
+/* Option buttons will change to these colours when clicked to indicate if the question is right or wrong */
+.correct {
+    background-color: #3BB561;
+}
+
+.incorrect {
+    background-color: #ff5f6b;
+}
+
 /* Media query for tablet sizes and up */
 @media screen and (min-width: 768px) {
     #bg-image-div {
