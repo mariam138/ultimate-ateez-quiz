@@ -73,8 +73,6 @@ let optionButton;
 
 function createOptions () {
 
-    // // Redeclare the options area variable due to block scope
-    // let optionsArea = document.getElementById('options-area');
     // Displays option buttons in a column
     optionsArea.style.display = "flex";
     optionsArea.style.flexDirection = "column";
@@ -191,9 +189,16 @@ let questions = [{
     correctAnswer: "San"
 }];
 
-let optionButtons = document.getElementsByClassName('options-button');
-let questionArea = document.getElementById('question-area');
-questionArea.addEventListener('click', console.log('hi'));
+let optionButtons = document.querySelectorAll('.options-button');
+let checkAnswer = () => {
+    console.log('click!')
+}
+optionButtons.forEach((optionButton) => {
+    optionButton.addEventListener('click', checkAnswer)
+});
+
+// let questionArea = document.getElementById('question-area');
+// questionArea.addEventListener('click', console.log('hi'));
 // let optionsArea = document.querySelector('options-area');
 // optionsArea.addEventListener('click', (e) => {
 //     if (e.target.classList.contains('options-button')) {
