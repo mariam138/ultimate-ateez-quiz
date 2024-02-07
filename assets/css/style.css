@@ -181,4 +181,10 @@ p {
         color: #faf932;
         background-color: black;
     }
+
+    /* Enlarges button when hovered over */
+    .options-button:hover {
+        transform: scale(1.1);
+        transition: all 0.5s;
+    }
 }
