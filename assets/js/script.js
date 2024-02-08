@@ -53,6 +53,7 @@ function loadQuiz () {
     <h2>${questions[0].question}</h2>`;
 
     createOptions();
+    clearStatus();
 
 }
 
@@ -236,4 +237,15 @@ function exitQuiz () {
     optionsArea.style.display = "none";
     quizArea.style.display = "block";
     exitModal.style.display = "none";
+}
+
+/** This function will remove the colours from the quiz buttons when the quiz is reloaded.
+ * The for loop loops through the three buttons defined in the optionButtons array.
+ */
+function clearStatus() {
+    
+    for (let i = 0; i < optionButtons.length; i++) {
+        optionButtons[i].classList.remove('correct');
+        optionButtons[i].classList.remove('incorrect');
+    }
 }
