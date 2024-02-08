@@ -36,6 +36,9 @@ startButton.addEventListener('click', loadQuiz);
 
 let quizArea = document.getElementById('quiz-area');
 let questionArea = document.getElementById('question-area');
+let currentQuestionIndex = 0;
+let score = 0;
+let scoreDiv = document.getElementById('score-div');
 
 /** When the start button is pressed
  * this function will load the quiz in the
@@ -51,7 +54,7 @@ function loadQuiz() {
     // Set up HTML for the question area div
     let currentQuestion = 1;
     questionArea.innerHTML = `<h1>Question ${currentQuestion}</h1>
-    <h2>${questions[0].question}</h2>`;
+    <h2>${questions[currentQuestionIndex].question}</h2>`;
 
     clearStatus();
     createOptions();
@@ -74,6 +77,10 @@ function loadQuiz() {
     // so user cannot click on another answer and its classlist property won't change
     // code adapted from: 
     // https://www.sololearn.com/en/Discuss/1794949/solvedis-there-a-way-to-disable-click-on-an-element-with-an-event-listener-without-removing-the-event-listener-or-flags-ifs
+
+    let scoreParagraph = document.createElement('p');
+    scoreParagraph.innerText = `${score} / 20`;
+    scoreDiv.appendChild(scoreParagraph);
 }
 
 let optionsArea = document.getElementById('options-area');
