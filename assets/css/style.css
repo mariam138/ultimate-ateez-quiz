@@ -81,6 +81,7 @@ p {
     flex-wrap: wrap;
 }
 
+/* Keeps the exit and next buttons in a row underneath the option buttons */
 #quiz-buttons-div {
     display: flex;
     width: 50%;
