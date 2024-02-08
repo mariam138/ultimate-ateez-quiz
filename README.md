@@ -129,6 +129,8 @@ I realised that having the index for options as "0" was causing the loop to crea
 
 4. After creating the buttons, I wanted to add click events to them all to create a *"CheckAnswer"* function. When I declared the **"optionButtons"** variable outside of the **"createOptions"** function and logged the node list to the console, it gave a length of 0. I realised that this was because the separate option buttons were being created inside the function, giving them **function scope**. By declaring **"optionButton"** as an empty variable *outside* the **"createOptions"** function, this allowed it to have a global scope. Logging the array of the option buttons to the console then worked, giving a length of 3.
 
+5. To allow the user to only have the option of clicking one of the option buttons, I added `{once:true}` to the event handler. However, after adding the exit and next buttons underneath the quiz, this feature seemed to also affect these buttons, even though the click event was only on the **options-area div**. So when clicking on the exit button first, then going back into the quiz from the modal, none of the option buttons were responding to the click event again. To stop this, I added **"e.stopPropagation()"** to the click events for the **exitModalButton** and **continueQuizButton**.
+
 ## Credits
 
 ### Code
