@@ -81,6 +81,14 @@ p {
     flex-wrap: wrap;
 }
 
+#quiz-buttons-div {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: baseline;
+    padding-bottom: 3%;
+}
+
 #start-button,
 .button,
 #next-button,
