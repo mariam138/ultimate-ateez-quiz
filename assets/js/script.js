@@ -264,5 +264,6 @@ function clearStatus() {
     }
     
     nextButton.classList.add('hidden'); // Hides the next button again when quiz starts or is reloaded
-    score = 0;
+    score = 0; // Resets counter to 0 when quiz is reloaded
+    scoreParagraph.innerText = `${score} / 20`; // Update displayed score
 }
