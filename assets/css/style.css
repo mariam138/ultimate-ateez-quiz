@@ -26,7 +26,11 @@ h2 {
     font-size: 1.7rem;
 }
 
-h1, h2 {
+h3 {
+    font-size: 1.5rem;
+}
+
+h1, h2, h3 {
     font-family: "Averia Sans Libre", sans-serif;
     text-align: center;
     padding: 10px;

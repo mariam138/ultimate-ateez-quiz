@@ -255,5 +255,5 @@ function clearStatus() {
         optionButtons[i].classList.remove('incorrect');
     }
     
-    nextButton.classList.add('hidden'); // Hides the next button again when quiz starts/ is reloaded
+    nextButton.classList.add('hidden'); // Hides the next button again when quiz starts or is reloaded
 }
