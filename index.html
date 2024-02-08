@@ -38,12 +38,18 @@
         <!-- Question area div where questions will load once quiz is started -->
         <div class="container hidden" id="question-area">
         </div>
+
         <!-- Area for option buttons to load in -->
         <div class="container hidden" id="options-area">
             <button class="options-button" id="option-one"></button>
             <button class="options-button" id="option-two"></button>
             <button class="options-button" id="option-three"></button>
-            <button class="hidden" id="next-button">Next <i class="fa-solid fa-arrow-right"></i></button>
+
+            <!-- Divider for the buttons which allow the user to exit the quiz or select the next question -->
+            <div id="quiz-buttons-div">
+                <button id="exit-button"> <i class="fa-solid fa-xmark"></i> Exit</button>
+                <button class="hidden" id="next-button">Next <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
         </div>
 
         <!-- Modal for instructions -->

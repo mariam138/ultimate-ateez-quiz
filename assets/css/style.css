@@ -81,7 +81,10 @@ p {
     flex-wrap: wrap;
 }
 
-#start-button, .button, #next-button {
+#start-button,
+.button,
+#next-button,
+#exit-button {
     font-size: 1.1rem;
     font-family: "Nunito sans", sans-serif;
     font-weight: 600;
@@ -102,6 +105,11 @@ p {
     color: black;
     background-color: #FAD732;
     margin: 5%;
+}
+
+#exit-button {
+    color: black;
+    background-color: #fc6815;
 }
 
 /* Modal styling */

@@ -196,8 +196,8 @@ optionsArea.addEventListener('click', (e) => {
 // https://www.sololearn.com/en/Discuss/1794949/solvedis-there-a-way-to-disable-click-on-an-element-with-an-event-listener-without-removing-the-event-listener-or-flags-ifs
 
 /** This function when called will check whether the option clicked on is the right answer
- * and highlight that button green and increment the score by one
- * if the incorrect answer is clicked, the button will highlight red.
+ * and highlight that button green and increment the score by one.
+ * If the incorrect answer is clicked, the button will highlight red.
  * Once an option is clicked, the Next button will be displayed to allow the user to go
  * to the next question.
  */
@@ -210,5 +210,5 @@ function checkAnswer (clickedButton) {
     }
 
     let nextButton = document.getElementById('next-button');
-    nextButton.classList.remove('hidden');
+    nextButton.classList.remove('hidden'); // Removes hidden class from next button when an option is clicked
 }
