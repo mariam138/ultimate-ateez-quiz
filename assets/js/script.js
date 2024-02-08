@@ -2,18 +2,14 @@
 
 // Get instructions modal from DOM
 let instructionsModal = document.getElementById('instructions-modal');
-
 // Get button that opens instructions modal
 let instructionsModalButton = document.getElementById('instructions-btn');
-
 // Get button that will close instructions modal
 let backButtonOne = document.getElementsByClassName('back-button')[0];
-
 // Opens instructions modal when button is clicked
 instructionsModalButton.onclick = function () {
     instructionsModal.style.display = "block";
 };
-
 // Closes instructions modal when back button is clicked
 backButtonOne.onclick = function () {
     instructionsModal.style.display = "none";
@@ -21,18 +17,14 @@ backButtonOne.onclick = function () {
 
 // Get settings modal from DOM
 let settingsModal = document.getElementById('settings-modal');
-
 // Get button that opens settings modal
 let settingsModalButton = document.getElementById('settings-btn');
-
 // Get button that will close settings modal
 let backButtonTwo = document.getElementsByClassName('back-button')[1];
-
 // Opens settings modal
 settingsModalButton.onclick = function () {
     settingsModal.style.display = "block";
 };
-
 // Closes settings modal
 backButtonTwo.onclick = function () {
     settingsModal.style.display = "none";
@@ -212,3 +204,21 @@ function checkAnswer (clickedButton) {
     let nextButton = document.getElementById('next-button');
     nextButton.classList.remove('hidden'); // Removes hidden class from next button when an option is clicked
 }
+
+// Get exit quiz modal from DOM
+let exitModal = document.getElementById('exit-modal');
+// Get button that opens exit modal
+let exitModalButton = document.getElementById('exit-button');
+// Get button that will leave the quiz
+let closeQuizButton = document.getElementById('close-quiz-btn');
+// Get button that will close the exit modal and return to quiz
+let continueQuizButton = document.getElementById('continue-quiz-btn');
+
+// Opens exit modal
+exitModalButton.onclick = function () {
+    exitModal.style.display = "block";
+};
+// Closes exit modal and continues quiz
+continueQuizButton.onclick = function () {
+    exitModal.style.display = "none";
+};
