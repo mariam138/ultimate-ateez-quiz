@@ -225,12 +225,24 @@ function nextQuestion () {
     ++currentQuestion; // increase number for question heading
     ++currentQuestionIndex; //increase question number index
 
+    // Update displayed variable values
     questionArea.innerHTML = `<h1>Question ${currentQuestion}</h1>
     <h2>${questions[currentQuestionIndex].question}</h2>`;
 
     optionOne.innerHTML = `${questions[currentQuestionIndex].options[0]}`;
     optionTwo.innerHTML = `${questions[currentQuestionIndex].options[1]}`;
     optionThree.innerHTML = `${questions[currentQuestionIndex].options[2]}`;
+
+    clearStatus();
+
+    optionsArea.removeEventListener('click', checkAnswer); // ensures only one click event is active at a time
+
+    optionsArea.addEventListener('click', (e) => {
+        if (e.target.classList.contains('options-button')) {
+            checkAnswer(e.target);
+        }
+    });
+
 }
 
 nextButton.addEventListener('click', nextQuestion);
@@ -278,6 +290,9 @@ function clearStatus() {
     }
     
     nextButton.classList.add('hidden'); // Hides the next button again when quiz starts or is reloaded
-    score = 0; // Resets counter to 0 when quiz is reloaded
+    // Resets counter to 0 when quiz is reloaded
+    if (currentQuestionIndex >= 20) {
+        score = 0;
+    }
     scoreParagraph.innerText = `${score} / 20`; // Update displayed score
 }
