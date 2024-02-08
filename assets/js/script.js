@@ -59,7 +59,7 @@ function loadQuiz() {
     /** This is declared in the loadQuiz function so that when the clearStatus function is called,
      * the event listeners are added back to the option buttons.
      */
-    
+
     // Adds the same event listener to mulitple elements
     // Adapted from https://fjolt.com/article/javascript-multiple-elements-addeventlistener
     optionsArea.addEventListener('click', (e) => {
@@ -256,5 +256,4 @@ function clearStatus() {
     }
     
     nextButton.classList.add('hidden'); // Hides the next button again when quiz starts/ is reloaded
-    return
 }
