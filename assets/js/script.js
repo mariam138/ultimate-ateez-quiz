@@ -208,6 +208,8 @@ let questions = [{
  * to the next question.
  */
 function checkAnswer (clickedButton) {
+    console.log("Clicked button text:", clickedButton.innerText);
+    console.log("Correct answer:", questions[currentQuestionIndex].correctAnswer);
     if (clickedButton.innerText === questions[currentQuestionIndex].correctAnswer) {
         clickedButton.classList.add('correct');
         ++score; // increase score by 1

@@ -131,7 +131,7 @@ I realised that having the index for options as "0" was causing the loop to crea
 
 5. To allow the user to only have the option of clicking one of the option buttons, I added `{once:true}` to the event handler. However, after adding the exit and next buttons underneath the quiz, this feature seemed to also affect these buttons, even though the click event was only on the **options-area div**. So when clicking on the exit button first, then going back into the quiz from the modal, none of the option buttons were responding to the click event again. To stop this, I added **"e.stopPropagation()"** to the click events for the **exitModalButton** and **continueQuizButton**.
 
-6. When looping through the quiz questions, whenever the correct answer was clicked, rather than the score increasing by 1 , it would increase by the index of the question number.
+6. When looping through the quiz questions, whenever the correct answer was clicked, rather than the score increasing by 1 , it would increase by the index of the question number. When logging the text for the clicked button and the corresponding correct answer, these both matches, but the console continued to log them an increasing number of times each question. This was why the score was increasing exponentially.
 
 ## Credits
 
