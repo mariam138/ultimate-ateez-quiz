@@ -189,8 +189,16 @@ optionsArea.addEventListener('click', (e) => {
     if (e.target.classList.contains('options-button')) {
         checkAnswer(e.target);
     }
-});
+} ,{once:true}); 
+// {once:true} allows only one button to be clicked therefore one click event
+// so user cannot click on another answer and its classlist property won't change
+// code adapted from: 
+// https://www.sololearn.com/en/Discuss/1794949/solvedis-there-a-way-to-disable-click-on-an-element-with-an-event-listener-without-removing-the-event-listener-or-flags-ifs
 
+/** This function when called will check whether the option clicked on is the right answer
+ * and highlight that button green and increment the score by one
+ * if the incorrect answer is clicked, the button will highlight red
+ */
 function checkAnswer (clickedButton) {
 
     if (clickedButton.innerText === questions[0].correctAnswer) {
@@ -198,5 +206,4 @@ function checkAnswer (clickedButton) {
     } else {
         clickedButton.classList.add('incorrect');
     }
-
 }
