@@ -36,6 +36,7 @@ startButton.addEventListener('click', loadQuiz);
 
 let quizArea = document.getElementById('quiz-area');
 let questionArea = document.getElementById('question-area');
+let currentQuestion = 1;
 let currentQuestionIndex = 0;
 let score = 0;
 let scoreDiv = document.getElementById('score-div');
@@ -52,7 +53,6 @@ function loadQuiz() {
     questionArea.style.display = "flex";
 
     // Set up HTML for the question area div
-    let currentQuestion = 1;
     questionArea.innerHTML = `<h1>Question ${currentQuestion}</h1>
     <h2>${questions[currentQuestionIndex].question}</h2>`;
 
@@ -212,14 +212,28 @@ let questions = [{
 function checkAnswer (clickedButton) {
     if (clickedButton.innerText === questions[currentQuestionIndex].correctAnswer) {
         clickedButton.classList.add('correct');
-        ++score;
-        scoreParagraph.innerText = `${score} / 20`;
+        ++score; // increase score by 1
+        scoreParagraph.innerText = `${score} / 20`; // update displayed value
     } else {
         clickedButton.classList.add('incorrect');
     }
 
     nextButton.classList.remove('hidden'); // Removes hidden class from next button when an option is clicked
 }
+
+function nextQuestion () {
+    ++currentQuestion; // increase number for question heading
+    ++currentQuestionIndex; //increase question number index
+
+    questionArea.innerHTML = `<h1>Question ${currentQuestion}</h1>
+    <h2>${questions[currentQuestionIndex].question}</h2>`;
+
+    optionOne.innerHTML = `${questions[currentQuestionIndex].options[0]}`;
+    optionTwo.innerHTML = `${questions[currentQuestionIndex].options[1]}`;
+    optionThree.innerHTML = `${questions[currentQuestionIndex].options[2]}`;
+}
+
+nextButton.addEventListener('click', nextQuestion);
 
 // Get exit quiz modal from DOM
 let exitModal = document.getElementById('exit-modal');
