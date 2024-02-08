@@ -78,9 +78,7 @@ function loadQuiz() {
     // code adapted from: 
     // https://www.sololearn.com/en/Discuss/1794949/solvedis-there-a-way-to-disable-click-on-an-element-with-an-event-listener-without-removing-the-event-listener-or-flags-ifs
 
-    let scoreParagraph = document.createElement('p');
-    scoreParagraph.innerText = `${score} / 20`;
-    scoreDiv.appendChild(scoreParagraph);
+    let scoreParagraph = document.getElementById('score-paragraph'); 
 }
 
 let optionsArea = document.getElementById('options-area');
@@ -89,6 +87,7 @@ let optionTwo = document.getElementById('option-two');
 let optionThree = document.getElementById('option-three');
 let optionButtons = [optionOne, optionTwo, optionThree];
 let nextButton = document.getElementById('next-button');
+let scoreParagraph = document.getElementById('score-paragraph');
 
 function createOptions () {
 
@@ -97,9 +96,9 @@ function createOptions () {
     optionsArea.style.flexDirection = "column";
     optionsArea.style.alignItems = "center";
  
-    optionOne.innerHTML = `${questions[0].options[0]}`;
-    optionTwo.innerHTML = `${questions[0].options[1]}`;
-    optionThree.innerHTML = `${questions[0].options[2]}`;
+    optionOne.innerHTML = `${questions[currentQuestionIndex].options[0]}`;
+    optionTwo.innerHTML = `${questions[currentQuestionIndex].options[1]}`;
+    optionThree.innerHTML = `${questions[currentQuestionIndex].options[2]}`;
 
 }
 
@@ -211,8 +210,10 @@ let questions = [{
  * to the next question.
  */
 function checkAnswer (clickedButton) {
-    if (clickedButton.innerText === questions[0].correctAnswer) {
+    if (clickedButton.innerText === questions[currentQuestionIndex].correctAnswer) {
         clickedButton.classList.add('correct');
+        ++score;
+        scoreParagraph.innerText = `${score} / 20`;
     } else {
         clickedButton.classList.add('incorrect');
     }
@@ -263,4 +264,5 @@ function clearStatus() {
     }
     
     nextButton.classList.add('hidden'); // Hides the next button again when quiz starts or is reloaded
+    score = 0;
 }
