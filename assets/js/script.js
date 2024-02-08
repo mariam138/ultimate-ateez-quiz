@@ -77,8 +77,6 @@ function loadQuiz() {
     // so user cannot click on another answer and its classlist property won't change
     // code adapted from: 
     // https://www.sololearn.com/en/Discuss/1794949/solvedis-there-a-way-to-disable-click-on-an-element-with-an-event-listener-without-removing-the-event-listener-or-flags-ifs
-
-    let scoreParagraph = document.getElementById('score-paragraph'); 
 }
 
 let optionsArea = document.getElementById('options-area');
@@ -291,7 +289,7 @@ function clearStatus() {
     
     nextButton.classList.add('hidden'); // Hides the next button again when quiz starts or is reloaded
     // Resets counter to 0 when quiz is reloaded
-    if (currentQuestionIndex >= 20) {
+    if (currentQuestionIndex === 0) {
         score = 0;
     }
     scoreParagraph.innerText = `${score} / 20`; // Update displayed score
