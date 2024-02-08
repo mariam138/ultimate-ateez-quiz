@@ -181,8 +181,9 @@ let questions = [{
 optionsArea.addEventListener('click', (e) => {
     if (e.target.classList.contains('options-button')) {
         checkAnswer(e.target);
-    }
-} ,{once:true}); 
+    } 
+}, {once:true}); 
+
 // {once:true} allows only one button to be clicked therefore one click event
 // so user cannot click on another answer and its classlist property won't change
 // code adapted from: 
@@ -195,7 +196,6 @@ optionsArea.addEventListener('click', (e) => {
  * to the next question.
  */
 function checkAnswer (clickedButton) {
-
     if (clickedButton.innerText === questions[0].correctAnswer) {
         clickedButton.classList.add('correct');
     } else {
@@ -216,16 +216,21 @@ let closeQuizButton = document.getElementById('close-quiz-btn');
 let continueQuizButton = document.getElementById('continue-quiz-btn');
 
 // Opens exit modal
-exitModalButton.onclick = function () {
+exitModalButton.onclick = function openExitModal (e) {
+    e.stopPropagation(); // To stop the {once:true} from having affect on the exit modal button
     exitModal.style.display = "block";
 };
 // Closes exit modal and continues quiz
-continueQuizButton.onclick = function () {
+continueQuizButton.onclick = function (e) {
+    e.stopPropagation(); // To stop the {once:true} from having affect on the continue quiz button
     exitModal.style.display = "none";
 };
 // Closes exit modal and exits quiz, going back to the home page
 closeQuizButton.addEventListener('click', exitQuiz)
 
+/** When the closeQuizButton is clicked, this will hide the two containers for the quiz
+ * and load up the start page again. It will also close the exit modal.
+ */
 function exitQuiz () {
     questionArea.style.display = "none";
     optionsArea.style.display = "none";
