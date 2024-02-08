@@ -81,7 +81,7 @@ p {
     flex-wrap: wrap;
 }
 
-#start-button, .button {
+#start-button, .button, #next-button {
     font-size: 1.1rem;
     font-family: "Nunito sans", sans-serif;
     font-weight: 600;
@@ -92,7 +92,7 @@ p {
     box-shadow: 2px 2px 5px;
 }
 
-#start-button {
+#start-button, #next-button {
     color: black;
     background-color: #5BCCED;
     margin: 5%;
@@ -153,6 +153,10 @@ p {
     background-color: #ff5f6b;
 }
 
+#next-button {
+    margin-bottom: 3%;
+}
+
 /* Media query for tablet sizes and up */
 @media screen and (min-width: 768px) {
     #bg-image-div {
@@ -182,7 +186,7 @@ p {
         width: 50%;
     }
 
-    #start-button:hover {
+    #start-button:hover, #next-button:hover {
         background-color: #76f9fb;
     }
 
