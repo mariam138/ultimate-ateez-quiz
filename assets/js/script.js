@@ -41,20 +41,39 @@ let questionArea = document.getElementById('question-area');
  * this function will load the quiz in the
  * question area
  */
-function loadQuiz () {
+function loadQuiz() {
     // Hide content of the quiz area div
     quizArea.style.display = "none";
 
     // Display the question area div
     questionArea.style.display = "flex";
+
     // Set up HTML for the question area div
     let currentQuestion = 1;
     questionArea.innerHTML = `<h1>Question ${currentQuestion}</h1>
     <h2>${questions[0].question}</h2>`;
 
-    createOptions();
     clearStatus();
+    createOptions();
 
+    /** This is declared in the loadQuiz function so that when the clearStatus function is called,
+     * the event listeners are added back to the option buttons.
+     */
+    
+    // Adds the same event listener to mulitple elements
+    // Adapted from https://fjolt.com/article/javascript-multiple-elements-addeventlistener
+    optionsArea.addEventListener('click', (e) => {
+        if (e.target.classList.contains('options-button')) {
+            checkAnswer(e.target);
+        }
+    }, {
+        once: true
+    });
+
+    // {once:true} allows only one button to be clicked therefore one click event
+    // so user cannot click on another answer and its classlist property won't change
+    // code adapted from: 
+    // https://www.sololearn.com/en/Discuss/1794949/solvedis-there-a-way-to-disable-click-on-an-element-with-an-event-listener-without-removing-the-event-listener-or-flags-ifs
 }
 
 let optionsArea = document.getElementById('options-area');
@@ -62,6 +81,7 @@ let optionOne = document.getElementById('option-one');
 let optionTwo = document.getElementById('option-two');
 let optionThree = document.getElementById('option-three');
 let optionButtons = [optionOne, optionTwo, optionThree];
+let nextButton = document.getElementById('next-button');
 
 function createOptions () {
 
@@ -177,19 +197,6 @@ let questions = [{
     correctAnswer: "San"
 }];
 
-// Adds the same event listener to mulitple elements
-// Adapted from https://fjolt.com/article/javascript-multiple-elements-addeventlistener
-optionsArea.addEventListener('click', (e) => {
-    if (e.target.classList.contains('options-button')) {
-        checkAnswer(e.target);
-    } 
-}, {once:true}); 
-
-// {once:true} allows only one button to be clicked therefore one click event
-// so user cannot click on another answer and its classlist property won't change
-// code adapted from: 
-// https://www.sololearn.com/en/Discuss/1794949/solvedis-there-a-way-to-disable-click-on-an-element-with-an-event-listener-without-removing-the-event-listener-or-flags-ifs
-
 /** This function when called will check whether the option clicked on is the right answer
  * and highlight that button green and increment the score by one.
  * If the incorrect answer is clicked, the button will highlight red.
@@ -203,7 +210,6 @@ function checkAnswer (clickedButton) {
         clickedButton.classList.add('incorrect');
     }
 
-    let nextButton = document.getElementById('next-button');
     nextButton.classList.remove('hidden'); // Removes hidden class from next button when an option is clicked
 }
 
@@ -248,4 +254,7 @@ function clearStatus() {
         optionButtons[i].classList.remove('correct');
         optionButtons[i].classList.remove('incorrect');
     }
+    
+    nextButton.classList.add('hidden'); // Hides the next button again when quiz starts/ is reloaded
+    return
 }
