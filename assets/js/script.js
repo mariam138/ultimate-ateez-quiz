@@ -197,7 +197,9 @@ optionsArea.addEventListener('click', (e) => {
 
 /** This function when called will check whether the option clicked on is the right answer
  * and highlight that button green and increment the score by one
- * if the incorrect answer is clicked, the button will highlight red
+ * if the incorrect answer is clicked, the button will highlight red.
+ * Once an option is clicked, the Next button will be displayed to allow the user to go
+ * to the next question.
  */
 function checkAnswer (clickedButton) {
 
@@ -206,4 +208,7 @@ function checkAnswer (clickedButton) {
     } else {
         clickedButton.classList.add('incorrect');
     }
+
+    let nextButton = document.getElementById('next-button');
+    nextButton.classList.remove('hidden');
 }
