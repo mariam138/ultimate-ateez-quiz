@@ -34,17 +34,18 @@ backButtonTwo.onclick = function () {
 let startButton = document.getElementById('start-button');
 startButton.addEventListener('click', loadQuiz);
 
+let quizArea = document.getElementById('quiz-area');
+let questionArea = document.getElementById('question-area');
+
 /** When the start button is pressed
  * this function will load the quiz in the
  * question area
  */
 function loadQuiz () {
     // Hide content of the quiz area div
-    let quizArea = document.getElementById('quiz-area');
     quizArea.style.display = "none";
 
     // Display the question area div
-    let questionArea = document.getElementById('question-area');
     questionArea.style.display = "flex";
     // Set up HTML for the question area div
     let currentQuestion = 1;
@@ -222,3 +223,12 @@ exitModalButton.onclick = function () {
 continueQuizButton.onclick = function () {
     exitModal.style.display = "none";
 };
+// Closes exit modal and exits quiz, going back to the home page
+closeQuizButton.addEventListener('click', exitQuiz)
+
+function exitQuiz () {
+    questionArea.style.display = "none";
+    optionsArea.style.display = "none";
+    quizArea.style.display = "block";
+    exitModal.style.display = "none";
+}
