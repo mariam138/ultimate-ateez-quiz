@@ -209,10 +209,11 @@ let questions = [{
  */
 function checkAnswer (clickedButton) {
     console.log("Clicked button text:", clickedButton.innerText);
-    console.log("Correct answer:", questions[currentQuestionIndex].correctAnswer);
+    // console.log("Correct answer:", questions[currentQuestionIndex].correctAnswer);
+    
     if (clickedButton.innerText === questions[currentQuestionIndex].correctAnswer) {
         clickedButton.classList.add('correct');
-        ++score; // increase score by 1
+        score++; // increase score by 1
         scoreParagraph.innerText = `${score} / 20`; // update displayed value
     } else {
         clickedButton.classList.add('incorrect');
@@ -223,7 +224,7 @@ function checkAnswer (clickedButton) {
 
 function nextQuestion () {
     ++currentQuestion; // increase number for question heading
-    ++currentQuestionIndex; //increase question number index
+    currentQuestionIndex++; //increase question number index
 
     // Update displayed variable values
     questionArea.innerHTML = `<h1>Question ${currentQuestion}</h1>
@@ -235,7 +236,7 @@ function nextQuestion () {
 
     clearStatus();
 
-    optionsArea.removeEventListener('click', checkAnswer); // ensures only one click event is active at a time
+    // optionsArea.removeEventListener('click', checkAnswer); // ensures only one click event is active at a time
 
     optionsArea.addEventListener('click', (e) => {
         if (e.target.classList.contains('options-button')) {
