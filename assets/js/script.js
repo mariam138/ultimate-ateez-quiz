@@ -36,7 +36,7 @@ startButton.addEventListener('click', loadQuiz);
 
 let quizArea = document.getElementById('quiz-area');
 let questionArea = document.getElementById('question-area');
-let currentQuestion = 1;
+let currentQuestion = 0;
 let currentQuestionIndex = 0;
 let score = 0;
 let scoreDiv = document.getElementById('score-div');
@@ -53,30 +53,17 @@ function loadQuiz() {
     questionArea.style.display = "flex";
 
     // Set up HTML for the question area div
-    questionArea.innerHTML = `<h1>Question ${currentQuestion}</h1>
-    <h2>${questions[currentQuestionIndex].question}</h2>`;
+    // questionArea.innerHTML = `<h1>Question ${currentQuestion}</h1>
+    // <h2>${questions[currentQuestionIndex].question}</h2>`;
 
     clearStatus();
-    createOptions();
 
-    /** This is declared in the loadQuiz function so that when the clearStatus function is called,
-     * the event listeners are added back to the option buttons.
-     */
+    optionsArea.style.display = "flex";
+    optionsArea.style.flexDirection = "column";
+    optionsArea.style.alignItems = "center";
 
-    // Adds the same event listener to mulitple elements
-    // Adapted from https://fjolt.com/article/javascript-multiple-elements-addeventlistener
-    optionsArea.addEventListener('click', (e) => {
-        if (e.target.classList.contains('options-button')) {
-            checkAnswer(e.target);
-        }
-    }, {
-        once: true
-    });
+    nextQuestion();
 
-    // {once:true} allows only one button to be clicked therefore one click event
-    // so user cannot click on another answer and its classlist property won't change
-    // code adapted from: 
-    // https://www.sololearn.com/en/Discuss/1794949/solvedis-there-a-way-to-disable-click-on-an-element-with-an-event-listener-without-removing-the-event-listener-or-flags-ifs
 }
 
 let optionsArea = document.getElementById('options-area');
@@ -86,19 +73,6 @@ let optionThree = document.getElementById('option-three');
 let optionButtons = [optionOne, optionTwo, optionThree];
 let nextButton = document.getElementById('next-button');
 let scoreParagraph = document.getElementById('score-paragraph');
-
-function createOptions () {
-
-    // Displays option buttons in a column
-    optionsArea.style.display = "flex";
-    optionsArea.style.flexDirection = "column";
-    optionsArea.style.alignItems = "center";
- 
-    optionOne.innerHTML = `${questions[currentQuestionIndex].options[0]}`;
-    optionTwo.innerHTML = `${questions[currentQuestionIndex].options[1]}`;
-    optionThree.innerHTML = `${questions[currentQuestionIndex].options[2]}`;
-
-}
 
 //Questions, options and their correct answers for the quiz
 let questions = [{
@@ -209,7 +183,6 @@ let questions = [{
  */
 function checkAnswer (clickedButton) {
     console.log("Clicked button text:", clickedButton.innerText);
-    // console.log("Correct answer:", questions[currentQuestionIndex].correctAnswer);
     
     if (clickedButton.innerText === questions[currentQuestionIndex].correctAnswer) {
         clickedButton.classList.add('correct');
@@ -223,9 +196,8 @@ function checkAnswer (clickedButton) {
 }
 
 function nextQuestion () {
-    ++currentQuestion; // increase number for question heading
-    currentQuestionIndex++; //increase question number index
-
+    currentQuestion++;
+    currentQuestionIndex++;
     // Update displayed variable values
     questionArea.innerHTML = `<h1>Question ${currentQuestion}</h1>
     <h2>${questions[currentQuestionIndex].question}</h2>`;
@@ -235,16 +207,13 @@ function nextQuestion () {
     optionThree.innerHTML = `${questions[currentQuestionIndex].options[2]}`;
 
     clearStatus();
-
-    // optionsArea.removeEventListener('click', checkAnswer); // ensures only one click event is active at a time
-
-    optionsArea.addEventListener('click', (e) => {
-        if (e.target.classList.contains('options-button')) {
-            checkAnswer(e.target);
-        }
-    });
-
 }
+
+optionsArea.addEventListener('click', (e) => {
+    if (e.target.classList.contains('options-button')) {
+        checkAnswer(e.target);
+    }
+});
 
 nextButton.addEventListener('click', nextQuestion);
 
