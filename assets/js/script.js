@@ -36,7 +36,7 @@ startButton.addEventListener('click', loadQuiz);
 
 let quizArea = document.getElementById('quiz-area');
 let questionArea = document.getElementById('question-area');
-let currentQuestion = 0;
+let currentQuestion = 1;
 let currentQuestionIndex = 0;
 let score = 0;
 let scoreDiv = document.getElementById('score-div');
@@ -62,8 +62,23 @@ function loadQuiz() {
     optionsArea.style.flexDirection = "column";
     optionsArea.style.alignItems = "center";
 
-    nextQuestion();
+    currentQuestion = 1;
+    currentQuestionIndex = 0;
 
+    questionArea.innerHTML = `<h1>Question ${currentQuestion}</h1>
+    <h2>${questions[currentQuestionIndex].question}</h2>`;
+   
+    createOptions();
+
+    // nextQuestion();
+
+}
+
+function createOptions() {
+
+    optionOne.innerHTML = `${questions[currentQuestionIndex].options[0]}`;
+    optionTwo.innerHTML = `${questions[currentQuestionIndex].options[1]}`;
+    optionThree.innerHTML = `${questions[currentQuestionIndex].options[2]}`;
 }
 
 let optionsArea = document.getElementById('options-area');
@@ -191,7 +206,7 @@ function checkAnswer (clickedButton) {
     } else {
         clickedButton.classList.add('incorrect');
     }
-
+    
     nextButton.classList.remove('hidden'); // Removes hidden class from next button when an option is clicked
 }
 
@@ -213,7 +228,7 @@ optionsArea.addEventListener('click', (e) => {
     if (e.target.classList.contains('options-button')) {
         checkAnswer(e.target);
     }
-});
+},);
 
 nextButton.addEventListener('click', nextQuestion);
 
