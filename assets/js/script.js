@@ -233,11 +233,25 @@ optionsArea.addEventListener('click', optionsClickHandler);
 nextButton.addEventListener('click', nextQuestion);
 
 let resultsArea = document.getElementById('results-area');
+let finalScore = document.getElementById('final-score');
+let finalScoreComment = document.getElementById('score-comment');
 
-function showResult () {
+function showResult() {
     optionsArea.style.display = "none";
     questionArea.style.display = "none";
     resultsArea.classList.remove('hidden');
+
+    finalScore.innerText = `${score} / 20`;
+
+    if (score <= 5) {
+        finalScoreComment.innerText = "It seems like you're still really new to the fandom. That's okay, you'll get to know Ateez better eventually!";
+    } else if (score <= 10) {
+        finalScoreComment.innerText = "Not bad! You know Ateez a little bit, but still learning about them!";
+    } else if (score <= 15) {
+        finalScoreComment.innerText = "You're definitely an Atiny, you know almost everything about Ateez!";
+    } else if (score <= 20) {
+        finalScoreComment.innerText = "Woah, you're the Master Atiny! You know everything about them, amazing!";
+    }
 }
 
 // Get exit quiz modal from DOM
