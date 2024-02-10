@@ -218,17 +218,10 @@ function nextQuestion () {
     clearStatus();
 
     if (currentQuestionIndex > 19) {
-        showResult();
+        nextButton.addEventListener('click',showResult);
     }
 
 }
-
-// optionsArea.addEventListener('click', (e) => {
-
-//     if (e.target.classList.contains('options-button')) {
-//         checkAnswer(e.target);
-//     }
-// }, {once:true});
 
 // Define the event listener function
 function optionsClickHandler(e) {
@@ -239,11 +232,15 @@ function optionsClickHandler(e) {
 
 // Add event listener to optionsArea
 optionsArea.addEventListener('click', optionsClickHandler);
-
+// Add event listener to nextButton
 nextButton.addEventListener('click', nextQuestion);
 
+let resultsArea = document.getElementById('results-area');
+
 function showResult () {
-    
+    optionsArea.classList.add('hidden');
+    questionArea.classList.add('hidden');
+    resultsArea.classList.remove('hidden');
 }
 
 // Get exit quiz modal from DOM
