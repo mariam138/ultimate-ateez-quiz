@@ -70,8 +70,6 @@ function loadQuiz() {
    
     createOptions();
 
-    // nextQuestion();
-
 }
 
 function createOptions() {
@@ -218,16 +216,35 @@ function nextQuestion () {
 
     createOptions();
     clearStatus();
+
+    if (currentQuestionIndex > 19) {
+        showResult();
+    }
+
 }
 
-optionsArea.addEventListener('click', (e) => {
+// optionsArea.addEventListener('click', (e) => {
 
+//     if (e.target.classList.contains('options-button')) {
+//         checkAnswer(e.target);
+//     }
+// }, {once:true});
+
+// Define the event listener function
+function optionsClickHandler(e) {
     if (e.target.classList.contains('options-button')) {
         checkAnswer(e.target);
     }
-}, {once:true});
+}
+
+// Add event listener to optionsArea
+optionsArea.addEventListener('click', optionsClickHandler);
 
 nextButton.addEventListener('click', nextQuestion);
+
+function showResult () {
+    
+}
 
 // Get exit quiz modal from DOM
 let exitModal = document.getElementById('exit-modal');
