@@ -197,7 +197,6 @@ let questions = [{
  * to the next question.
  */
 function checkAnswer (clickedButton) {
-    console.log("Clicked button text:", clickedButton.innerText);
     
     if (clickedButton.innerText === questions[currentQuestionIndex].correctAnswer) {
         clickedButton.classList.add('correct');
@@ -217,18 +216,16 @@ function nextQuestion () {
     questionArea.innerHTML = `<h1>Question ${currentQuestion}</h1>
     <h2>${questions[currentQuestionIndex].question}</h2>`;
 
-    optionOne.innerHTML = `${questions[currentQuestionIndex].options[0]}`;
-    optionTwo.innerHTML = `${questions[currentQuestionIndex].options[1]}`;
-    optionThree.innerHTML = `${questions[currentQuestionIndex].options[2]}`;
-
+    createOptions();
     clearStatus();
 }
 
 optionsArea.addEventListener('click', (e) => {
+
     if (e.target.classList.contains('options-button')) {
         checkAnswer(e.target);
     }
-},);
+}, {once:true});
 
 nextButton.addEventListener('click', nextQuestion);
 
