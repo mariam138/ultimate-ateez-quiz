@@ -66,9 +66,11 @@ p {
 }
 
 /* To keep image within the div */
-#landing-page-image > img {
+#landing-page-image > img,
+#results-area > img {
     width: 85%;
     padding: 0 5%;
+    align-self: center;
 }
 
 #quiz-area > hr {
