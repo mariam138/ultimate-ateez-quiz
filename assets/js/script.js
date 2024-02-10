@@ -210,17 +210,18 @@ function checkAnswer (clickedButton) {
 function nextQuestion () {
     currentQuestion++;
     currentQuestionIndex++;
-    // Update displayed variable values
-    questionArea.innerHTML = `<h1>Question ${currentQuestion}</h1>
-    <h2>${questions[currentQuestionIndex].question}</h2>`;
 
-    createOptions();
-    clearStatus();
+    if (currentQuestionIndex < questions.length) {
+        // Update displayed variable values
+        questionArea.innerHTML = `<h1>Question ${currentQuestion}</h1>
+        <h2>${questions[currentQuestionIndex].question}</h2>`;
 
-    if (currentQuestionIndex > 19) {
-        nextButton.addEventListener('click',showResult);
+        createOptions();
+        clearStatus();
+    } else {
+        showResult();
     }
-
+   
 }
 
 // Define the event listener function
