@@ -52,10 +52,6 @@ function loadQuiz() {
     // Display the question area div
     questionArea.style.display = "flex";
 
-    // Set up HTML for the question area div
-    // questionArea.innerHTML = `<h1>Question ${currentQuestion}</h1>
-    // <h2>${questions[currentQuestionIndex].question}</h2>`;
-
     clearStatus();
 
     optionsArea.style.display = "flex";
@@ -239,8 +235,8 @@ nextButton.addEventListener('click', nextQuestion);
 let resultsArea = document.getElementById('results-area');
 
 function showResult () {
-    optionsArea.classList.add('hidden');
-    questionArea.classList.add('hidden');
+    optionsArea.style.display = "none";
+    questionArea.style.display = "none";
     resultsArea.classList.remove('hidden');
 }
 
