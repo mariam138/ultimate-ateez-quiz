@@ -52,8 +52,6 @@ function loadQuiz() {
     // Display the question area div
     questionArea.style.display = "flex";
 
-    clearStatus();
-
     optionsArea.style.display = "flex";
     optionsArea.style.flexDirection = "column";
     optionsArea.style.alignItems = "center";
@@ -61,10 +59,15 @@ function loadQuiz() {
     currentQuestion = 1;
     currentQuestionIndex = 0;
 
+    clearStatus();
+
     questionArea.innerHTML = `<h1>Question ${currentQuestion}</h1>
     <h2>${questions[currentQuestionIndex].question}</h2>`;
    
     createOptions();
+    for (let i = 0; i < optionButtons.length; i++) {
+        optionButtons[i].removeAttribute('disabled');
+    }
 
 }
 
@@ -194,8 +197,6 @@ function optionsClickHandler(e) {
         for (i = 0; i < 3; i++) {
             optionButtons[i].setAttribute('disabled', true);
         }
-
-        console.log('option buttons are disabled');
     }
 
 }
