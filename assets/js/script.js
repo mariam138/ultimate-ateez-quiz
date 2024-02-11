@@ -256,6 +256,11 @@ let resultsArea = document.getElementById('results-area');
 let finalScore = document.getElementById('final-score');
 let finalScoreComment = document.getElementById('score-comment');
 
+/** This function will close the question and options area
+ * and show the results area instead. The final score is displayed.
+ * Based on the final score, a comment will show on how much of
+ * a fan you are.
+ */
 function showResult() {
     optionsArea.style.display = "none";
     questionArea.style.display = "none";
@@ -296,6 +301,8 @@ closeQuizButton.addEventListener('click', exitQuiz)
 
 /** When the closeQuizButton is clicked, this will hide the two containers for the quiz
  * and load up the start page again. It will also close the exit modal.
+ * When the Home button is clicked on the results page,
+ * this will also hide the results area page again.
  */
 function exitQuiz () {
     questionArea.style.display = "none";
@@ -306,16 +313,19 @@ function exitQuiz () {
 }
 
 /** This function will remove the colours from the quiz buttons when the quiz is reloaded.
- * The for loop loops through the three buttons defined in the optionButtons array.
+ * The Next button is hidden again, and updates the displayed score.
+ * If the quiz is reloaded, the score and question index are set back to 0.
  */
 function clearStatus() {
     
+    // Removes the correct/incorrect classes from the buttons so they show yellow again
     for (let i = 0; i < optionButtons.length; i++) {
         optionButtons[i].classList.remove('correct');
         optionButtons[i].classList.remove('incorrect');
     }
     
-    nextButton.classList.add('hidden'); // Hides the next button again when quiz starts or is reloaded
+    // Hides the next button again when quiz starts or is reloaded
+    nextButton.classList.add('hidden');
     // Resets counter to 0 when quiz is reloaded
     if (currentQuestionIndex === 0) {
         score = 0;
@@ -323,8 +333,8 @@ function clearStatus() {
     scoreParagraph.innerText = `${score} / 20`; // Update displayed score
 }
 
-const restartQuizButton = document.getElementById('restart-quiz-btn');
-const homeButton = document.getElementById('home-btn');
+const restartQuizButton = document.getElementById('restart-quiz-btn'); // Get restart button from DOM
+const homeButton = document.getElementById('home-btn'); // Get home button from DOM
 
-restartQuizButton.addEventListener('click', loadQuiz);
-homeButton.addEventListener('click', exitQuiz);
+restartQuizButton.addEventListener('click', loadQuiz); // Will restart the quiz when the restart button is clicked
+homeButton.addEventListener('click', exitQuiz); // Will go back to the landing page when the home button is clicked
