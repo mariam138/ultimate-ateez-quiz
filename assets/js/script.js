@@ -282,12 +282,10 @@ let continueQuizButton = document.getElementById('continue-quiz-btn');
 
 // Opens exit modal
 exitModalButton.onclick = function openExitModal (e) {
-    e.stopPropagation(); // To stop the {once:true} from having affect on the exit modal button
     exitModal.style.display = "block";
 };
 // Closes exit modal and continues quiz
 continueQuizButton.onclick = function (e) {
-    e.stopPropagation(); // To stop the {once:true} from having affect on the continue quiz button
     exitModal.style.display = "none";
 };
 // Closes exit modal and exits quiz, going back to the home page
