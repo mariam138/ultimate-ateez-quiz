@@ -110,7 +110,7 @@ p {
     box-shadow: 2px 2px 5px;
 }
 
-#start-button, #next-button {
+#start-button, #next-button, #home-button {
     color: black;
     background-color: #5BCCED;
     margin: 5%;

@@ -52,6 +52,8 @@ function loadQuiz() {
     // Display the question area div
     questionArea.style.display = "flex";
 
+    resultsArea.classList.add('hidden');
+
     optionsArea.style.display = "flex";
     optionsArea.style.flexDirection = "column";
     optionsArea.style.alignItems = "center";
@@ -300,6 +302,7 @@ function exitQuiz () {
     optionsArea.style.display = "none";
     quizArea.style.display = "block";
     exitModal.style.display = "none";
+    resultsArea.classList.add('hidden');
 }
 
 /** This function will remove the colours from the quiz buttons when the quiz is reloaded.
@@ -319,3 +322,9 @@ function clearStatus() {
     }
     scoreParagraph.innerText = `${score} / 20`; // Update displayed score
 }
+
+const restartQuizButton = document.getElementById('restart-quiz-btn');
+const homeButton = document.getElementById('home-btn');
+
+restartQuizButton.addEventListener('click', loadQuiz);
+homeButton.addEventListener('click', exitQuiz);
