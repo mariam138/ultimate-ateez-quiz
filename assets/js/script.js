@@ -73,6 +73,7 @@ function createOptions() {
     optionOne.innerHTML = `${questions[currentQuestionIndex].options[0]}`;
     optionTwo.innerHTML = `${questions[currentQuestionIndex].options[1]}`;
     optionThree.innerHTML = `${questions[currentQuestionIndex].options[2]}`;
+
 }
 
 let optionsArea = document.getElementById('options-area');
@@ -212,6 +213,11 @@ function nextQuestion () {
         questionArea.innerHTML = `<h1>Question ${currentQuestion}</h1>
         <h2>${questions[currentQuestionIndex].question}</h2>`;
 
+        // Remove disabled attribute from all option buttons
+        for (let i = 0; i < optionButtons.length; i++) {
+            optionButtons[i].removeAttribute('disabled');
+        }
+
         createOptions();
         clearStatus();
     } else {
@@ -224,6 +230,11 @@ function nextQuestion () {
 function optionsClickHandler(e) {
     if (e.target.classList.contains('options-button')) {
         checkAnswer(e.target);
+    }
+
+    // Disables the buttons once an option has been chosen
+    for (i = 0; i < 3; i++) {
+        optionButtons[i].setAttribute('disabled', true);
     }
 }
 
