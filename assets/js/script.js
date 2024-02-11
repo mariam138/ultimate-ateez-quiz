@@ -185,6 +185,21 @@ let questions = [{
     correctAnswer: "San"
 }];
 
+// Define the event listener function
+function optionsClickHandler(e) {
+    if (e.target.classList.contains('options-button')) {
+        checkAnswer(e.target);
+
+        // Disables the buttons once an option has been chosen
+        for (i = 0; i < 3; i++) {
+            optionButtons[i].setAttribute('disabled', true);
+        }
+
+        console.log('option buttons are disabled');
+    }
+
+}
+
 /** This function when called will check whether the option clicked on is the right answer
  * and highlight that button green and increment the score by one.
  * If the incorrect answer is clicked, the button will highlight red.
@@ -205,37 +220,28 @@ function checkAnswer (clickedButton) {
 }
 
 function nextQuestion () {
+
     currentQuestion++;
     currentQuestionIndex++;
 
     if (currentQuestionIndex < questions.length) {
+         // Remove disabled attribute from all option buttons
+         for (let i = 0; i < optionButtons.length; i++) {
+            optionButtons[i].removeAttribute('disabled');
+        }
+
         // Update displayed variable values
         questionArea.innerHTML = `<h1>Question ${currentQuestion}</h1>
         <h2>${questions[currentQuestionIndex].question}</h2>`;
 
-        // Remove disabled attribute from all option buttons
-        for (let i = 0; i < optionButtons.length; i++) {
-            optionButtons[i].removeAttribute('disabled');
-        }
-
         createOptions();
         clearStatus();
+
     } else {
         showResult();
     }
    
-}
 
-// Define the event listener function
-function optionsClickHandler(e) {
-    if (e.target.classList.contains('options-button')) {
-        checkAnswer(e.target);
-    }
-
-    // Disables the buttons once an option has been chosen
-    for (i = 0; i < 3; i++) {
-        optionButtons[i].setAttribute('disabled', true);
-    }
 }
 
 // Add event listener to optionsArea
