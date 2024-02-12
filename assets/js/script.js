@@ -74,6 +74,10 @@ function loadQuiz() {
 
 }
 
+/** A for loop is used to iterate through the optionButtons array
+ * and create the option buttons text, using the options array in the
+ * questions objects.
+ */
 function createOptions() {
 
     for (let i = 0; i < 3; i++) {
