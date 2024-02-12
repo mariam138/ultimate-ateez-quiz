@@ -76,9 +76,10 @@ function loadQuiz() {
 
 function createOptions() {
 
-    optionOne.innerHTML = `${questions[currentQuestionIndex].options[0]}`;
-    optionTwo.innerHTML = `${questions[currentQuestionIndex].options[1]}`;
-    optionThree.innerHTML = `${questions[currentQuestionIndex].options[2]}`;
+    for (let i = 0; i < 3; i++) {
+        optionButtons[i].innerHTML = `${questions[currentQuestionIndex].options[i]}`;
+        console.log('options created');
+    }
 
 }
 
