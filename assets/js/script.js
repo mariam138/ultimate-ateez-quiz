@@ -62,7 +62,7 @@ function loadQuiz() {
     currentQuestionIndex = 0;
 
     clearStatus();
-    shuffleQuestions(questions);
+    shuffleQuestions(questions); // This will shuffle the questions each time the quiz is (re)loaded
 
     questionArea.innerHTML = `<h1>Question ${currentQuestion}</h1>
     <h2>${questions[currentQuestionIndex].question}</h2>`;

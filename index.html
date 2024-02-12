@@ -87,8 +87,13 @@
         <div class="modal" id="settings-modal">
             <div class="modal-content">
                 <h2>Settings:</h2>
-                <p>Settings to be put here soon.
-                </p>
+                <h3>Quiz length:</h3>
+                <div id="quiz-length-radio-btns">
+                    <input type="radio" name="quiz-length" id="long-quiz" checked>
+                    <label for="long-quiz">Long quiz</label>
+                    <input type="radio" name="quiz-length" id="short-quiz">
+                    <label for="short-quiz">Short quiz</label>
+                </div>
                 <button class="button back-button"> <i class="fa-solid fa-arrow-left"></i> Back</button>
             </div>
         </div>
@@ -108,5 +113,8 @@
     
     <!-- Fontawesome icons -->
     <script src="https://kit.fontawesome.com/dc26e02520.js" crossorigin="anonymous"></script>
+
+    <!-- Text that will show if JavaScript has been disabled or a user's browser does not support it -->
+    <noscript>Oops! Seems like you have JavaScript turned off or your browser doesn't support it.</noscript>
 </body>
 </html>
