@@ -150,6 +150,15 @@ p {
     border: 1px solid black;
     border-radius: 4px;
 }
+/* To give breathing space to radio buttons and make text larger */
+#quiz-length-radio-btns > span {
+    padding: 1%;
+}
+
+#quiz-length-radio-btns > span > label {
+    font-size: 1.25rem;
+}
+
 
 /* Styling of the option buttons */
 .options-button {
