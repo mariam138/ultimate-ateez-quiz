@@ -62,6 +62,7 @@ function loadQuiz() {
     currentQuestionIndex = 0;
 
     clearStatus();
+    shuffleQuestions(questions);
 
     questionArea.innerHTML = `<h1>Question ${currentQuestion}</h1>
     <h2>${questions[currentQuestionIndex].question}</h2>`;
@@ -189,6 +190,19 @@ let questions = [{
     options: ["Yunho", "San", "Jongho"],
     correctAnswer: "San"
 }];
+
+/** This function will shuffle any array that is passed through to it, using the Fisher-Yates
+ * algorithm. In this case, this function will be called to shuffle the quiz questions
+ * each time the quiz is started or reloaded. Code adapted from:
+ * https://www.youtube.com/watch?v=FGAUekwri1Q&list=WL&index=2
+ */
+function shuffleQuestions (array) {
+    for (let i = array.length - 1; i > 0; i-- ) {
+        const random = Math.floor(Math.random() * (i + 1));
+
+        [array[i], array[random]] = [array[random], array[i]];
+    }
+}
 
 // Define the event listener function
 function optionsClickHandler(e) {
