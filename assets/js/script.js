@@ -236,6 +236,12 @@ function checkAnswer (clickedButton) {
         scoreParagraph.innerText = `${score} / 20`; // update displayed value
     } else {
         clickedButton.classList.add('incorrect');
+        // Highlights the correct answer if the incorrect answer is clicked
+        for (button of optionButtons) {
+            if (button.innerText === questions[currentQuestionIndex].correctAnswer) {
+                button.classList.add('correct');
+            }
+        }
     }
     
     nextButton.classList.remove('hidden'); // Removes hidden class from next button when an option is clicked
