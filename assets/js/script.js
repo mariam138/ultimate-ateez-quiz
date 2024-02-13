@@ -82,7 +82,6 @@ function createOptions() {
 
     for (let i = 0; i < 3; i++) {
         optionButtons[i].innerHTML = `${questions[currentQuestionIndex].options[i]}`;
-        console.log('options created');
     }
 
 }
@@ -363,3 +362,17 @@ const homeButton = document.getElementById('home-btn'); // Get home button from 
 
 restartQuizButton.addEventListener('click', loadQuiz); // Will restart the quiz when the restart button is clicked
 homeButton.addEventListener('click', exitQuiz); // Will go back to the landing page when the home button is clicked
+
+// Gets value of the checked radio button
+// Code adapted from https://www.javascripttutorial.net/javascript-dom/javascript-radio-button/
+const radioButtons = document.querySelectorAll('input[name="quiz-length"]');
+        for(const radioButton of radioButtons){
+            radioButton.addEventListener('change', showSelected);
+        }        
+        
+        function showSelected(e) {
+            // console.log(e);
+            if (this.checked) {
+               console.log(this.value);
+            }
+        }
