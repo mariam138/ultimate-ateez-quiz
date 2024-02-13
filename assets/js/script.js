@@ -45,19 +45,8 @@ const radioButtons = document.querySelectorAll('input[name="quiz-length"]');
 let radioButton;
 let shortQuizButton = document.getElementById('short-quiz');
 let longQuizButton = document.getElementById('long-quiz');
+let scoreParagraph = document.getElementById('score-paragraph');
 
-function chooseQuizLength (e) {
-    console.log(e);
-    if (shortQuizButton.checked){
-        currentQuestionIndex = 10;
-    } else if (longQuizButton.checked) {
-        currentQuestionIndex = 0;
-    }
-}
-
-for (radioButton of radioButtons) {
-    radioButton.addEventListener('change', chooseQuizLength);
-}
 
 
 /** When the start button is pressed
@@ -78,7 +67,6 @@ function loadQuiz() {
     optionsArea.style.alignItems = "center";
 
     currentQuestion = 1;
-    // currentQuestionIndex = 0;
 
     clearStatus();
     shuffleQuestions(questions); // This will shuffle the questions each time the quiz is (re)loaded
@@ -105,13 +93,29 @@ function createOptions() {
 
 }
 
+
+function chooseQuizLength (e) {
+    if (shortQuizButton.checked){
+        currentQuestionIndex = 10;
+        scoreParagraph.innerText = `${score} / 10`;
+        console.log(scoreParagraph.innerText);
+    } else if (longQuizButton.checked) {
+        currentQuestionIndex = 0;
+        scoreParagraph.innerText = `${score} / 20`;
+        console.log(scoreParagraph.innerText);
+    }
+}
+
+for (radioButton of radioButtons) {
+    radioButton.addEventListener('change', chooseQuizLength);
+}
+
 let optionsArea = document.getElementById('options-area');
 let optionOne = document.getElementById('option-one');
 let optionTwo = document.getElementById('option-two');
 let optionThree = document.getElementById('option-three');
 let optionButtons = [optionOne, optionTwo, optionThree];
 let nextButton = document.getElementById('next-button');
-let scoreParagraph = document.getElementById('score-paragraph');
 
 //Questions, options and their correct answers for the quiz
 let questions = [{
@@ -251,7 +255,11 @@ function checkAnswer (clickedButton) {
     if (clickedButton.innerText === questions[currentQuestionIndex].correctAnswer) {
         clickedButton.classList.add('correct');
         score++; // increase score by 1
-        scoreParagraph.innerText = `${score} / 20`; // update displayed value
+        // if (shortQuizButton.checked) {
+        //     scoreParagraph.innerText = `${score} / 10`;
+        // } else if (longQuizButton.checked) {
+        //     scoreParagraph.innerText = `${score} / 20`; // update displayed value
+        // }
     } else {
         clickedButton.classList.add('incorrect');
         // Highlights the correct answer if the incorrect answer is clicked
@@ -373,7 +381,19 @@ function clearStatus() {
     if (currentQuestionIndex === 0) {
         score = 0;
     }
-    scoreParagraph.innerText = `${score} / 20`; // Update displayed score
+
+    if (shortQuizButton.checked){
+        // currentQuestionIndex = 10;
+        scoreParagraph.innerText = `${score} / 10`;
+        console.log(scoreParagraph.innerText);
+    } else if (longQuizButton.checked) {
+        // currentQuestionIndex = 0;
+        // score = 0;
+        scoreParagraph.innerText = `${score} / 20`;
+        console.log(scoreParagraph.innerText);
+    }
+
+    // scoreParagraph.innerText = `${score} / 20`; // Update displayed score
 }
 
 const restartQuizButton = document.getElementById('restart-quiz-btn'); // Get restart button from DOM
