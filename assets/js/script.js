@@ -87,6 +87,8 @@ function loadQuiz() {
  */
 function createOptions() {
 
+    //Shuffle the order the options are shown each time a question is loaded
+    shuffleQuestions(optionButtons);
     for (let i = 0; i < 3; i++) {
         optionButtons[i].innerHTML = `${questions[currentQuestionIndex].options[i]}`;
     }
