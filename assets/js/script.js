@@ -41,6 +41,25 @@ let currentQuestionIndex = 0;
 let score = 0;
 let scoreDiv = document.getElementById('score-div');
 
+const radioButtons = document.querySelectorAll('input[name="quiz-length"]');
+let radioButton;
+let shortQuizButton = document.getElementById('short-quiz');
+let longQuizButton = document.getElementById('long-quiz');
+
+function chooseQuizLength (e) {
+    console.log(e);
+    if (shortQuizButton.checked){
+        currentQuestionIndex = 10;
+    } else if (longQuizButton.checked) {
+        currentQuestionIndex = 0;
+    }
+}
+
+for (radioButton of radioButtons) {
+    radioButton.addEventListener('change', chooseQuizLength);
+}
+
+
 /** When the start button is pressed
  * this function will load the quiz in the
  * question area
@@ -59,7 +78,7 @@ function loadQuiz() {
     optionsArea.style.alignItems = "center";
 
     currentQuestion = 1;
-    currentQuestionIndex = 0;
+    // currentQuestionIndex = 0;
 
     clearStatus();
     shuffleQuestions(questions); // This will shuffle the questions each time the quiz is (re)loaded
@@ -365,14 +384,24 @@ homeButton.addEventListener('click', exitQuiz); // Will go back to the landing p
 
 // Gets value of the checked radio button
 // Code adapted from https://www.javascripttutorial.net/javascript-dom/javascript-radio-button/
-const radioButtons = document.querySelectorAll('input[name="quiz-length"]');
-        for(const radioButton of radioButtons){
-            radioButton.addEventListener('change', showSelected);
-        }        
-        
-        function showSelected(e) {
-            // console.log(e);
-            if (this.checked) {
-               console.log(this.value);
-            }
-        }
+// const radioButtons = document.querySelectorAll('input[name="quiz-length"]');
+// let radioButton;
+// for (radioButton of radioButtons) {
+//     radioButton.addEventListener('change', chooseQuizLength);
+// }
+
+// function showSelected(e) {
+//     // console.log(e);
+//     if (this.checked) {
+//         console.log(this.value);
+//     }
+// }
+
+// function chooseQuizLength (e) {
+//     console.log(e);
+//     if (radioButton.value === 'short-quiz'){
+//         currentQuestionIndex = 10;
+//     } else {
+//         currentQuestionIndex = 0;
+//     }
+// }
