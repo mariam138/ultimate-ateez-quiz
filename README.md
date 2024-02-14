@@ -127,6 +127,12 @@ Clicking on the **Play again?** button will reload the quiz and start from the b
 
 ### Future Features
 
+The first feature I would like to implement is adding a score board to the game, using the window's local storage. This would allow the user to enter a name or a nickname if they wished. If they didn't want to enter a name, then a randomly generated one would be used in their place on the score board. The scores would show either out of 10 or out of 20, depending on the quiz length chosen. Alternatively, two seperate score boards could be made, one for the long quiz and one for the short quiz. 
+
+The second feature I would like to implement is adding a dark/night mode to the game. This could be accessed in the settings. I would change the quiz's background image to a darker group image of ateez, but the containers for the quiz and all buttons would remain the same. 
+
+A third feature would be to implement a timer to each question, maybe for a harder setting for the quiz. On each question, the user would have a 10 second timer counting down at the top. If the user does not choose in time, the correct answer would be shown but their score would not go up.
+
 ## Testing
 
 ### Validation of Code
