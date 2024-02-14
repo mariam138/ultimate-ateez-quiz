@@ -21,14 +21,32 @@ let settingsModal = document.getElementById('settings-modal');
 let settingsModalButton = document.getElementById('settings-btn');
 // Get button that will close settings modal
 let backButtonTwo = document.getElementsByClassName('back-button')[1];
-// Opens settings modal
-settingsModalButton.onclick = function () {
-    settingsModal.style.display = "block";
-};
+// // Opens settings modal
+// settingsModalButton.onclick = function () {
+//     settingsModal.style.display = "block";
+// };
 // Closes settings modal
-backButtonTwo.onclick = function () {
-    settingsModal.style.display = "none";
-};
+// backButtonTwo.onclick = function () {
+//     settingsModal.style.display = "none";
+// };
+
+function openModal(modal) {
+    modal.style.display = "block";
+    console.log('open');
+}
+
+function closeModal(modal) {
+    modal.style.display = "none";
+    console.log('closed');
+}
+
+settingsModalButton.addEventListener('click', function () {
+    openModal(settingsModal);
+});
+
+backButtonTwo.addEventListener('click', function () {
+    closeModal(settingsModal);
+});
 
 // When the start button is pressed, the loadQuiz function is called
 let startButton = document.getElementById('start-button');
