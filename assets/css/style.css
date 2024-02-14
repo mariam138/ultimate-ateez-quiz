@@ -150,6 +150,7 @@ p {
     border: 1px solid black;
     border-radius: 4px;
 }
+
 /* To give breathing space to radio buttons and make text larger */
 #quiz-length-radio-btns > span {
     padding: 1%;
@@ -157,6 +158,11 @@ p {
 
 #quiz-length-radio-btns > span > label {
     font-size: 1.25rem;
+}
+
+/* Gives extra breathing rooom at the bottom of the buttons for small screens */
+#exit-modal-btns {
+    margin-bottom: 7px;
 }
 
 
