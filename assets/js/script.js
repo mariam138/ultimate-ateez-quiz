@@ -6,14 +6,14 @@ let instructionsModal = document.getElementById('instructions-modal');
 let instructionsModalButton = document.getElementById('instructions-btn');
 // Get button that will close instructions modal
 let backButtonOne = document.getElementsByClassName('back-button')[0];
-// Opens instructions modal when button is clicked
-instructionsModalButton.onclick = function () {
-    instructionsModal.style.display = "block";
-};
-// Closes instructions modal when back button is clicked
-backButtonOne.onclick = function () {
-    instructionsModal.style.display = "none";
-};
+// // Opens instructions modal when button is clicked
+// instructionsModalButton.onclick = function () {
+//     instructionsModal.style.display = "block";
+// };
+// // Closes instructions modal when back button is clicked
+// backButtonOne.onclick = function () {
+//     instructionsModal.style.display = "none";
+// };
 
 // Get settings modal from DOM
 let settingsModal = document.getElementById('settings-modal');
@@ -42,6 +42,8 @@ function closeModal(modal) {
 
 settingsModalButton.addEventListener('click', () => openModal(settingsModal));
 backButtonTwo.addEventListener('click', () => closeModal(settingsModal));
+instructionsModalButton.addEventListener('click', () => openModal(instructionsModal));
+backButtonOne.addEventListener('click', () => closeModal(instructionsModal));
 
 // When the start button is pressed, the loadQuiz function is called
 let startButton = document.getElementById('start-button');
