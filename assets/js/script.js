@@ -368,13 +368,16 @@ let closeQuizButton = document.getElementById('close-quiz-btn');
 let continueQuizButton = document.getElementById('continue-quiz-btn');
 
 // Opens exit modal
-exitModalButton.onclick = function openExitModal (e) {
-    exitModal.style.display = "block";
-};
+// exitModalButton.onclick = function openExitModal (e) {
+//     exitModal.style.display = "block";
+// };
+
+exitModalButton.addEventListener('click', () => openModal(exitModal));
+continueQuizButton.addEventListener('click', () => closeModal(exitModal));
 // Closes exit modal and continues quiz
-continueQuizButton.onclick = function (e) {
-    exitModal.style.display = "none";
-};
+// continueQuizButton.onclick = function (e) {
+//     exitModal.style.display = "none";
+// };
 // Closes exit modal and exits quiz, going back to the home page
 closeQuizButton.addEventListener('click', exitQuiz)
 
