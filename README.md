@@ -157,6 +157,16 @@ Deployment of the project took place early on, once the HTML and CSS for the hom
 4. Under the **Branch** section, the page was selected to be made from the **main** branch followed by the **root** folder.
 5. These settings were saved and the website was deployed after a few minutes, with a link being provided at the top of the page.
 
+To clone the repository, the following steps are as follows:
+
+1. On the repository, click the **Code** tab in the upper navigation bar, and then click the green **Code** button to reveal a drop down menu.
+2. Copy the URL for the repository
+3. In the coding workspace, open the terminal and change the current working directory to the one where you want the clone to be located
+4. In the terminal, write `git clone` and paste the copied URL after it
+5. Press **Enter** to create the cloned repository
+
+Cloning the repository allows all files to be accessible on the local computer.
+
 ## Bug Fixes
 
 1. When trying to create the options buttons for when the quiz started, the button was not showing in the HTML. However, it would show in the console when logged.
