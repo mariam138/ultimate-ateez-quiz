@@ -145,7 +145,7 @@ A third feature would be to implement a timer to each question, maybe for a hard
 
 ## Technologies Used
 
-To create the wireframes, **Balsamiq** was used.
+To create the wireframes, **Balsamiq** was used. The quiz was created using **Gitpod**. 
 
 ## Deployment
 
