@@ -78,6 +78,36 @@ Clicking on the **Settings** button will open a modal, allowing you to choose be
 ![Screenshot 2024-02-14 at 20 09 22](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/5e2ea1d4-7d55-4b84-bca5-d7133e746961)
  Again, pressing the **Back** button will take you back to the home page.
 
+ Clicking the **Start** buttion leads straight into the quiz.
+
+ ### Quiz Section
+
+ Upon clicking the **Start** button, the home page disappears to reveal the quiz section. The question number is at the top with the question underneath. In a separate container, the current score (either out of 10 or 20) is shown. Underneath the score counter are the options for each question. The quiz has been designed so that each time it is started or reloaded, the questions and the options are both shuffled. Therefore, the order of the questions and the options will be different each time.
+
+ ![Screenshot 2024-02-14 at 20 21 35](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/a6f2a7ff-0d67-452d-ad98-566b3d470d5c)
+
+Below the options is an **Exit** button, which opens a modal when clicked. When hovered on, the button changes to red text and a black background. 
+
+![Screenshot 2024-02-14 at 20 23 00](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/86f1ee5b-d4ed-4432-9110-31444277f0b8)
+
+The modal provides the user with the option to either go back to the home page when clicking **Yes** or to continue with the quiz by clicking **No, go back**. Both of these buttons also have hover styling where the colours are switched.
+
+![Screenshot 2024-02-14 at 20 23 42](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/5c3f3e55-051e-4029-ac83-e09e1fee61ef)
+
+When the correct answer is clicked, it highlights in green and increases the score by 1.
+
+![Screenshot 2024-02-14 at 20 26 18](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/31b91fd1-91f4-49f5-a470-593a18c828aa)
+
+When the wrong answer is clicked, it is highlighted in red while simultaneously the correct answer is highlighted green. The score counter does not change when the wrong answer is chosen.
+
+![Screenshot 2024-02-14 at 20 27 51](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/7163cbaa-0b3f-4627-a0f8-9fb60f5c96c3)
+
+All option buttons have a hover feature where they enlarge slightly. 
+
+![Screenshot 2024-02-14 at 20 29 08](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/8bb6a2e8-6629-4a1b-bad8-e67fb6f9985f)
+
+Clicking on the **Next** button then loads the next question. Any answers that have been highlighted in green or red go back to yellow. On the final question, the **Next** button leads to the results page.
+
 ### Future Features
 
 ## Testing
