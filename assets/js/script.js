@@ -1,5 +1,4 @@
 // Code to create modal is adapted from: https://www.w3schools.com/howto/howto_css_modals.asp
-
 // Get instructions modal from DOM
 let instructionsModal = document.getElementById('instructions-modal');
 // Get button that opens instructions modal
@@ -38,6 +37,8 @@ function closeModal(modal) {
     modal.style.display = "none";
 }
 
+// Anonymous functions, shortened with arrow functions, used to call the openModal and closeModal functions
+// Code adapted from https://www.javascripttutorial.net/javascript-anonymous-functions/
 settingsModalButton.addEventListener('click', () => openModal(settingsModal));
 backButtonTwo.addEventListener('click', () => closeModal(settingsModal));
 instructionsModalButton.addEventListener('click', () => openModal(instructionsModal));
