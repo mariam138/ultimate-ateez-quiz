@@ -67,9 +67,11 @@ function loadQuiz() {
     optionsArea.style.alignItems = "center";
 
     currentQuestion = 1;
+    score = 0;
 
     clearStatus();
     shuffleQuestions(questions); // This will shuffle the questions each time the quiz is (re)loaded
+    chooseQuizLength();
 
     questionArea.innerHTML = `<h1>Question ${currentQuestion}</h1>
     <h2>${questions[currentQuestionIndex].question}</h2>`;
@@ -79,6 +81,7 @@ function loadQuiz() {
         optionButtons[i].removeAttribute('disabled');
     }
 
+  
 }
 
 /** A for loop is used to iterate through the optionButtons array
@@ -96,15 +99,13 @@ function createOptions() {
 }
 
 
-function chooseQuizLength (e) {
+function chooseQuizLength () {
     if (shortQuizButton.checked){
         currentQuestionIndex = 10;
         scoreParagraph.innerText = `${score} / 10`;
-        console.log(scoreParagraph.innerText);
     } else if (longQuizButton.checked) {
         currentQuestionIndex = 0;
         scoreParagraph.innerText = `${score} / 20`;
-        console.log(scoreParagraph.innerText);
     }
 }
 
@@ -257,11 +258,11 @@ function checkAnswer (clickedButton) {
     if (clickedButton.innerText === questions[currentQuestionIndex].correctAnswer) {
         clickedButton.classList.add('correct');
         score++; // increase score by 1
-        // if (shortQuizButton.checked) {
-        //     scoreParagraph.innerText = `${score} / 10`;
-        // } else if (longQuizButton.checked) {
-        //     scoreParagraph.innerText = `${score} / 20`; // update displayed value
-        // }
+        if (shortQuizButton.checked) {
+            scoreParagraph.innerText = `${score} / 10`;
+        } else if (longQuizButton.checked) {
+            scoreParagraph.innerText = `${score} / 20`; // update displayed value
+        }
     } else {
         clickedButton.classList.add('incorrect');
         // Highlights the correct answer if the incorrect answer is clicked
@@ -379,23 +380,11 @@ function clearStatus() {
     
     // Hides the next button again when quiz starts or is reloaded
     nextButton.classList.add('hidden');
-    // Resets counter to 0 when quiz is reloaded
-    if (currentQuestionIndex === 0) {
-        score = 0;
-    }
+    // // Resets counter to 0 when quiz is reloaded
+    // if (currentQuestionIndex === 0) {
+    //     score = 0;
+    // }
 
-    if (shortQuizButton.checked){
-        // currentQuestionIndex = 10;
-        scoreParagraph.innerText = `${score} / 10`;
-        console.log(scoreParagraph.innerText);
-    } else if (longQuizButton.checked) {
-        // currentQuestionIndex = 0;
-        // score = 0;
-        scoreParagraph.innerText = `${score} / 20`;
-        console.log(scoreParagraph.innerText);
-    }
-
-    // scoreParagraph.innerText = `${score} / 20`; // Update displayed score
 }
 
 const restartQuizButton = document.getElementById('restart-quiz-btn'); // Get restart button from DOM
