@@ -139,6 +139,18 @@ A third feature would be to implement a timer to each question, maybe for a hard
 
 ### Lighthouse Testing
 
+Using Lighthouse in Chrome's DevTools, the performance of the loading of the page was analysed.
+
+On desktop, performance achieved an overall socre of 94, so no further changes were made.
+
+![Screenshot 2024-02-14 at 21 14 17](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/187a54e4-23a6-4ba9-a303-ccf92c9b6eb0)
+
+On mobile, the initial performance scored 78. 
+
+![Screenshot 2024-02-14 at 21 16 31](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/ecddf5be-5182-4d86-8830-85908d820514)
+
+After looking into the report, this was because of the size of the background image.
+
 ### Accesibility Testing
 
 ### Manual Testing
