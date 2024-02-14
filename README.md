@@ -60,11 +60,12 @@ The home page features a group picture of ateez as the background with a bright 
 
 ![Screenshot 2024-02-14 at 19 43 48](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/df240062-119f-458f-a1d9-f0ccda902673)
 
-On larger screens, hovering the mouse over the buttons will change their colour with a slight transition. The blue **"Start!"** button will change into a lighter blue, while the **"Instructions"** and **"Settings"** buttons change their background colour to black and the text to yellow. This is to indicate clickability, but also to separate the **"Start!"** button from the others visually, to indicate it has a different action. 
+On larger screens, hovering the mouse over the buttons will change their colour with a slight transition. The blue **"Start!"** button will change into a lighter blue and enlarge slightly, while the **"Instructions"** and **"Settings"** buttons change their background colour to black and the text to yellow. This is to indicate clickability, but also to separate the **"Start!"** button from the others visually, to indicate it has a different action. 
 
-![Screenshot 2024-02-01 at 13 56 30](https://github.com/mariam138/legacy-of-dubai/assets/150139337/bd2a3ba0-3cd5-4829-96db-d0e275f0da04)
-![Screenshot 2024-02-01 at 13 56 37](https://github.com/mariam138/legacy-of-dubai/assets/150139337/b068d58b-2eca-429d-9208-1c4f1d602cc4)
-![Screenshot 2024-02-01 at 13 56 40](https://github.com/mariam138/legacy-of-dubai/assets/150139337/86b1ad52-e9d1-492a-8b51-7100eb771cbf)
+![Screenshot 2024-02-14 at 19 55 45](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/94f541ce-2640-49ed-91f6-957f23baf3c0)
+![Screenshot 2024-02-14 at 19 55 55](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/3d962b15-f7b6-4438-a958-c6e9cf47df30)
+![Screenshot 2024-02-14 at 19 56 01](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/15653fda-08fe-4853-adcb-c6ae54e48b48)
+
 
 When clicking on the **"Instructions"** button, a modal appears explaining briefly how the game will work.
 
