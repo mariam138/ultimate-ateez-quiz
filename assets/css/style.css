@@ -199,7 +199,7 @@ p {
 @media screen and (min-width: 768px) {
     #bg-image-div {
         background-image: url(../images/ateez-illusion-image.webp);
-        background-position: bottom;
+        background-position: 0 20%;
     }
     
     /* Make fonts larger on larger screens */
