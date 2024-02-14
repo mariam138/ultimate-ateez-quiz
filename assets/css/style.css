@@ -272,4 +272,9 @@ p {
     #results-area-btns > .button {
         margin: 0 1% 1.5%;
     }
+
+    /* Allows the modal boxes to take up less space on larger screens */
+    .modal {
+        padding: 12% 25%;
+    }
 }
