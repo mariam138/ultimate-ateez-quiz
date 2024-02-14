@@ -320,16 +320,28 @@ function showResult() {
     questionArea.style.display = "none";
     resultsArea.classList.remove('hidden');
 
-    finalScore.innerText = `${score} / 20`;
-
-    if (score <= 5) {
-        finalScoreComment.innerText = "It seems like you're still really new to the fandom. That's okay, you'll get to know Ateez better eventually!";
-    } else if (score <= 10) {
-        finalScoreComment.innerText = "Not bad! You know Ateez a little bit, but still learning about them!";
-    } else if (score <= 15) {
-        finalScoreComment.innerText = "You're definitely an Atiny, you know almost everything about Ateez!";
-    } else if (score <= 20) {
-        finalScoreComment.innerText = "Woah, you're the Master Atiny! You know everything about them, amazing!";
+    if (longQuizButton.checked) {
+        finalScore.innerText = `${score} / 20`;
+        if (score <= 5) {
+            finalScoreComment.innerText = "It seems like you're still really new to the fandom. That's okay, you'll get to know Ateez better eventually!";
+        } else if (score <= 10) {
+            finalScoreComment.innerText = "Not bad! You know Ateez a little bit, but still learning about them!";
+        } else if (score <= 15) {
+            finalScoreComment.innerText = "You're definitely an Atiny, you know almost everything about Ateez!";
+        } else if (score <= 20) {
+            finalScoreComment.innerText = "Woah, you're the Master Atiny! You know everything about them, amazing!";
+        }
+    } else if (shortQuizButton.checked) {
+        finalScore.innerText = `${score} / 10`;
+        if (score <= 2) {
+            finalScoreComment.innerText = "It seems like you're still really new to the fandom. That's okay, you'll get to know Ateez better eventually!";
+        } else if (score <= 5) {
+            finalScoreComment.innerText = "Not bad! You know Ateez a little bit, but still learning about them!";
+        } else if (score <= 7) {
+            finalScoreComment.innerText = "You're definitely an Atiny, you know almost everything about Ateez!";
+        } else if (score <= 10) {
+            finalScoreComment.innerText = "Woah, you're the Master Atiny! You know everything about them, amazing!";
+        }
     }
 }
 
@@ -371,7 +383,6 @@ function exitQuiz () {
  * If the quiz is reloaded, the score and question index are set back to 0.
  */
 function clearStatus() {
-    
     // Removes the correct/incorrect classes from the buttons so they show yellow again
     for (let i = 0; i < optionButtons.length; i++) {
         optionButtons[i].classList.remove('correct');
@@ -380,11 +391,6 @@ function clearStatus() {
     
     // Hides the next button again when quiz starts or is reloaded
     nextButton.classList.add('hidden');
-    // // Resets counter to 0 when quiz is reloaded
-    // if (currentQuestionIndex === 0) {
-    //     score = 0;
-    // }
-
 }
 
 const restartQuizButton = document.getElementById('restart-quiz-btn'); // Get restart button from DOM
@@ -393,26 +399,3 @@ const homeButton = document.getElementById('home-btn'); // Get home button from 
 restartQuizButton.addEventListener('click', loadQuiz); // Will restart the quiz when the restart button is clicked
 homeButton.addEventListener('click', exitQuiz); // Will go back to the landing page when the home button is clicked
 
-// Gets value of the checked radio button
-// Code adapted from https://www.javascripttutorial.net/javascript-dom/javascript-radio-button/
-// const radioButtons = document.querySelectorAll('input[name="quiz-length"]');
-// let radioButton;
-// for (radioButton of radioButtons) {
-//     radioButton.addEventListener('change', chooseQuizLength);
-// }
-
-// function showSelected(e) {
-//     // console.log(e);
-//     if (this.checked) {
-//         console.log(this.value);
-//     }
-// }
-
-// function chooseQuizLength (e) {
-//     console.log(e);
-//     if (radioButton.value === 'short-quiz'){
-//         currentQuestionIndex = 10;
-//     } else {
-//         currentQuestionIndex = 0;
-//     }
-// }
