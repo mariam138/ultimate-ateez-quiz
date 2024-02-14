@@ -58,7 +58,7 @@ To produce wireframes for the quiz, I used Balsamiq. The wireframes helped me ha
 
 The home page features a group picture of ateez as the background with a bright blue plain background which fits in with the colour scheme. Underneath the title quiz is another group picture of Ateez, which is responsive. Underneath the picture is the tagline **"How well do you know Ateez?"**, followed by some more paragraph text. Underneath the text there are three buttons: one to start the quiz, one for the instructions on how the quiz works and lastly one to change the settings of the game. 
 
-![Screenshot 2024-02-01 at 13 53 25](https://github.com/mariam138/legacy-of-dubai/assets/150139337/5018700b-191c-49fe-9879-acc50071cc3d)
+![Screenshot 2024-02-14 at 19 43 48](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/df240062-119f-458f-a1d9-f0ccda902673)
 
 On larger screens, hovering the mouse over the buttons will change their colour with a slight transition. The blue **"Start!"** button will change into a lighter blue, while the **"Instructions"** and **"Settings"** buttons change their background colour to black and the text to yellow. This is to indicate clickability, but also to separate the **"Start!"** button from the others visually, to indicate it has a different action. 
 
