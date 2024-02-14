@@ -69,7 +69,7 @@ On larger screens, hovering the mouse over the buttons will change their colour 
 
 When clicking on the **"Instructions"** button, a modal appears explaining briefly how the game will work.
 
-![Screenshot 2024-02-01 at 18 11 09](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/7438cc86-5e0c-4ecb-86cf-327d2d97b601)
+![Screenshot 2024-02-14 at 20 06 03](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/902cc9af-06b0-4203-80b5-8f283253f5a7)
 
 Clicking the **"Back"** button will close the modal and return back to the home page. 
 
