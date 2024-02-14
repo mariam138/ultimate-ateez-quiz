@@ -32,7 +32,7 @@ Fontjoy generated the font **"Nunito Sans"** which I have decided to use as my p
 
 ### Wireframes
 
-To produce wireframes for the quiz, I used Balsamiq. The wireframes helped me have a basic idea of the setup I wanted for my quiz, although the aim was to keep it all on one page. I made wireframes for both mobile and desktop for the home page, the quiz itself and the score page at the end.
+To produce wireframes for the quiz, I used Balsamiq. The wireframes helped me have a basic idea of the setup I wanted for my quiz, although the aim was to keep it all on one page. I made wireframes for both mobile and desktop for the home page, the quiz itself and the score page at the end. Some adjustments were made from the wireframes for the final deployed version.
 
 #### Landing Page
 
