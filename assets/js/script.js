@@ -398,4 +398,3 @@ const homeButton = document.getElementById('home-btn'); // Get home button from 
 
 restartQuizButton.addEventListener('click', loadQuiz); // Will restart the quiz when the restart button is clicked
 homeButton.addEventListener('click', exitQuiz); // Will go back to the landing page when the home button is clicked
-
