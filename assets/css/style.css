@@ -208,7 +208,7 @@ p {
     }
 
     h2 {
-        font-size: 2.3rem;
+        font-size: 2.1rem;
     }
 
     p {
@@ -233,9 +233,10 @@ p {
         background-color: black;
     }
 
-    /* Makes the options buttons smaller in width on larger screens */
+    /* Makes the options buttons smaller in width on larger screens and take up less space vertically */
     .options-button {
         width: 50%;
+        margin: 1%;
     }
 
     /* Enlarges button when hovered over */
@@ -249,5 +250,16 @@ p {
         background-color: black;
         transition: all 0.5s;
         border: 1px solid #fc6815;
+    }
+
+    /* Make image smaller to stop overflow of container on larger screens*/
+    #results-area > img {
+        width: 47%;
+        padding: 1% 5% 2%;
+    }
+
+    /* Reduce margins for results area buttons to help stop further overflow on larger screens */
+    #results-area-btns > .button {
+        margin: 0 1% 1.5%;
     }
 }
