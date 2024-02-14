@@ -67,11 +67,16 @@ On larger screens, hovering the mouse over the buttons will change their colour 
 ![Screenshot 2024-02-14 at 19 56 01](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/15653fda-08fe-4853-adcb-c6ae54e48b48)
 
 
-When clicking on the **"Instructions"** button, a modal appears explaining briefly how the game will work.
+When clicking on the **Instructions** button, a modal appears explaining briefly how the game will work.
 
 ![Screenshot 2024-02-14 at 20 06 03](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/902cc9af-06b0-4203-80b5-8f283253f5a7)
 
-Clicking the **"Back"** button will close the modal and return back to the home page. 
+Clicking the **"Back"** button will close the modal and return to the home page. 
+
+Clicking on the **Settings** button will open a modal, allowing you to choose between a longer quiz of 20 questions, or a shorter quiz of 10 questions.
+
+![Screenshot 2024-02-14 at 20 09 22](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/5e2ea1d4-7d55-4b84-bca5-d7133e746961)
+ Again, pressing the **Back** button will take you back to the home page.
 
 ### Future Features
 
