@@ -40,13 +40,8 @@ function closeModal(modal) {
     console.log('closed');
 }
 
-settingsModalButton.addEventListener('click', function () {
-    openModal(settingsModal);
-});
-
-backButtonTwo.addEventListener('click', function () {
-    closeModal(settingsModal);
-});
+settingsModalButton.addEventListener('click', () => openModal(settingsModal));
+backButtonTwo.addEventListener('click', () => closeModal(settingsModal));
 
 // When the start button is pressed, the loadQuiz function is called
 let startButton = document.getElementById('start-button');
