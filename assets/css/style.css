@@ -245,6 +245,11 @@ p {
         transition: all 0.3s;
     }
 
+    /* Lets the quiz buttons at the bottom of the option area take up less space on larger screens */
+    #quiz-buttons-div {
+        padding: 2%;
+    }
+
     #exit-button:hover {
         color: #fc6815;
         background-color: black;
