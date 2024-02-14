@@ -32,12 +32,10 @@ let backButtonTwo = document.getElementsByClassName('back-button')[1];
 
 function openModal(modal) {
     modal.style.display = "block";
-    console.log('open');
 }
 
 function closeModal(modal) {
     modal.style.display = "none";
-    console.log('closed');
 }
 
 settingsModalButton.addEventListener('click', () => openModal(settingsModal));
