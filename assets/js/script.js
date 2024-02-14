@@ -380,7 +380,7 @@ continueQuizButton.addEventListener('click', () => closeModal(exitModal));
 //     exitModal.style.display = "none";
 // };
 // Closes exit modal and exits quiz, going back to the home page
-closeQuizButton.addEventListener('click', exitQuiz)
+closeQuizButton.addEventListener('click', exitQuiz);
 
 /** When the closeQuizButton is clicked, this will hide the two containers for the quiz
  * and load up the start page again. It will also close the exit modal.
