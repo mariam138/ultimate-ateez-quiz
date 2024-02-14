@@ -108,6 +108,23 @@ All option buttons have a hover feature where they enlarge slightly.
 
 Clicking on the **Next** button then loads the next question. Any answers that have been highlighted in green or red go back to yellow. On the final question, the **Next** button leads to the results page.
 
+### Results Page
+
+At the end of the quiz, the user's final score is shown, alongside a comment indicating how much of a fan of Ateez they are. There are four different comments depending on the score the user gets. 
+
+![Screenshot 2024-02-14 at 20 35 24](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/aaebde2e-4f05-49c0-b822-f348755b92d8)
+
+There are four comments possible: 
+- If the score is **0-5 / 20** or **0-2 / 10**, the comment shown is *"It seems like you're still really new to the fandom. That's okay, you'll get to know Ateez better eventually!"*
+- If the score is **6-10 / 20** or **3-5 / 10**, the comment shown is *"Not bad! You know Ateez a little bit, but still learning about them!"*
+- If the score is **11-15 / 20** or **6-7 / 10**, the comment shown is *"You're definitely an Atiny, you know almost everything about Ateez!"*
+- If the score is **16-20 / 20** or **8-10 / 10**, the comment shown is *"Woah, you're the Master Atiny! You know everything about them, amazing!"*
+
+Clicking on the **Play again?** button will reload the quiz and start from the beginning. Pressing the **Home** button will go back to the home page. Both buttons have a hover effect where the text becomes yellow and the background becomes black.
+
+![Screenshot 2024-02-14 at 20 42 08](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/0631dd82-d4f7-461f-914e-5ec257c6a55e)
+![Screenshot 2024-02-14 at 20 42 18](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/36e937c3-d2ba-4760-9380-24bd555b048e)
+
 ### Future Features
 
 ## Testing
