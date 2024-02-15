@@ -1,3 +1,5 @@
+// Variables
+
 // Get instructions modal from DOM
 let instructionsModal = document.getElementById('instructions-modal');
 // Get button that opens instructions modal
@@ -145,6 +147,7 @@ let questions = [{
     correctAnswer: "San"
 }];
 
+// Functions
 
 function openModal(modal) {
     modal.style.display = "block";
@@ -346,6 +349,9 @@ function clearStatus() {
     nextButton.classList.add('hidden');
 }
 
+
+// Event Listeners
+
 // Anonymous functions, shortened with arrow functions, used to call the openModal and closeModal functions
 // Code adapted from https://www.javascripttutorial.net/javascript-anonymous-functions/
 settingsModalButton.addEventListener('click', () => openModal(settingsModal));
@@ -354,62 +360,22 @@ instructionsModalButton.addEventListener('click', () => openModal(instructionsMo
 backButtonOne.addEventListener('click', () => closeModal(instructionsModal));
 
 // When the start button is pressed, the loadQuiz function is called
-
 startButton.addEventListener('click', loadQuiz);
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 for (radioButton of radioButtons) {
     radioButton.addEventListener('change', chooseQuizLength);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // Add event listener to optionsArea
 optionsArea.addEventListener('click', optionsClickHandler);
 // Add event listener to nextButton
 nextButton.addEventListener('click', nextQuestion);
 
-
-
-
-
-
-
-
 exitModalButton.addEventListener('click', () => openModal(exitModal));
 continueQuizButton.addEventListener('click', () => closeModal(exitModal));
 
 // Closes exit modal and exits quiz, going back to the home page
 closeQuizButton.addEventListener('click', exitQuiz);
-
-
-
-
-
-
 
 restartQuizButton.addEventListener('click', loadQuiz); // Will restart the quiz when the restart button is clicked
 homeButton.addEventListener('click', exitQuiz); // Will go back to the landing page when the home button is clicked
