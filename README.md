@@ -1,6 +1,6 @@
 # The Ultimate Ateez Quiz
 
-![Screenshot 2024-02-01 at 13 17 33](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/46cee039-90fe-4b8f-b519-802ed8b696b8)
+![Screenshot 2024-02-15 at 12 53 18](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/86397f97-c99f-4af5-bbcc-22a6ce16e6dd)
 
 ## Introduction
 
