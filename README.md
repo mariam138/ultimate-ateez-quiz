@@ -259,6 +259,13 @@ For the testing of this project, both responsive features and the Javascript log
 | -------------------------- | ------------------------------------------------------------------------------------------ | --------------------------------------- | ------------- |
 | <noscript> element in HTML | When javascript is disabled, a message should appear telling the user it has been disabled | Disabling Javascript in Chrome DevTools | Pass          |
 
+#### 404 Page
+
+| Feature being tested                           | Expected Outcome                                                        | How is the feature being tested | Pass or Fail? |
+| ---------------------------------------------- | ----------------------------------------------------------------------- | ------------------------------- | ------------- |
+| Home Button                                    | When the button is clicked, the user is navigated back to the home page | Click on the Home button        | Pass          |
+| Home Button hover effect (larger screens only) | When moving the mouse over the button, the button should change colours | Hover mouse over button         | Pass          |
+
 ## Technologies Used
 
 To create the wireframes, **Balsamiq** was used. The quiz was created using **Gitpod**. 
