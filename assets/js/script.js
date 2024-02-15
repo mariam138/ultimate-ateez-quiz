@@ -166,10 +166,18 @@ let questions = [{
 
 // Functions
 
+/** This function is used to open any modals. It takes a modal parameter,
+ * so it can be applied to all the modals in the file. It sets the modal's display
+ * to "block".
+*/
 function openModal(modal) {
     modal.style.display = "block";
 }
 
+/** This function is used to close modals. It again takes a modal parameter,
+ * so it can be applied to all modals in the file. It sets the modal's display
+ * back to "none" to essentially hide the modal.
+ */
 function closeModal(modal) {
     modal.style.display = "none";
 }
@@ -181,27 +189,32 @@ function closeModal(modal) {
 function loadQuiz() {
     // Hide content of the quiz area div
     quizArea.style.display = "none";
-
     // Display the question area div
     questionArea.style.display = "flex";
-
+    // Ensures the results area is hidden, especially when the quiz is restarted
     resultsArea.classList.add('hidden');
 
+    // Applies styling to the options area for the buttons
     optionsArea.style.display = "flex";
     optionsArea.style.flexDirection = "column";
     optionsArea.style.alignItems = "center";
 
+    // Redeclare the current question and score values when the quiz is (re)loaded
     currentQuestion = 1;
     score = 0;
 
     clearStatus();
-    shuffleQuestions(questions); // This will shuffle the questions each time the quiz is (re)loaded
+    // Shuffles the order of the questions each time the quiz is (re)loaded
+    shuffleQuestions(questions);
     chooseQuizLength();
 
+    // This will display the text for the question area when the quiz is loaded
     questionArea.innerHTML = `<h1>Question ${currentQuestion}</h1>
     <h2>${questions[currentQuestionIndex].question}</h2>`;
    
     createOptions();
+
+    // Loops through each option button and removes the disabled attribute when the quiz is (re)loaded
     for (let i = 0; i < optionButtons.length; i++) {
         optionButtons[i].removeAttribute('disabled');
     }
@@ -209,7 +222,7 @@ function loadQuiz() {
 
 /** A for loop is used to iterate through the optionButtons array
  * and create the option buttons text, using the options array in the
- * questions objects.
+ * questions array's objects.
  */
 function createOptions() {
     //Shuffle the order the options are shown each time a question is loaded
@@ -219,6 +232,10 @@ function createOptions() {
     }
 }
 
+/** This function sets the question index and the score counter
+ * depending on which radio button is checked. By setting the question index,
+ * this determines the number of questions which can be answered by the user.
+ */
 function chooseQuizLength () {
     if (shortQuizButton.checked){
         currentQuestionIndex = 10;
@@ -242,7 +259,12 @@ function shuffleQuestions (array) {
     }
 }
 
-// Define the event listener function
+/** This function calles another function, 'checkAnswer', 
+ * to be called when the target of the click event is one of the
+ * option buttons. After the initial click, a for loop is then used
+ * to add the 'disabled' attribute to each option button so that 
+ * no further events can take place.
+ */
 function optionsClickHandler(e) {
     if (e.target.classList.contains('options-button')) {
         checkAnswer(e.target);
@@ -256,18 +278,21 @@ function optionsClickHandler(e) {
 
 /** This function when called will check whether the option clicked on is the right answer
  * and highlight that button green and increment the score by one.
- * If the incorrect answer is clicked, the button will highlight red.
+ * If the incorrect answer is clicked, the button will highlight red, but also highlight
+ * the correct answer for that question in green.
  * Once an option is clicked, the Next button will be displayed to allow the user to go
  * to the next question.
  */
 function checkAnswer (clickedButton) {
     if (clickedButton.innerText === questions[currentQuestionIndex].correctAnswer) {
         clickedButton.classList.add('correct');
-        score++; // increase score by 1
+        // Increase the score by 1
+        score++;
+        // Update the score counter
         if (shortQuizButton.checked) {
             scoreParagraph.innerText = `${score} / 10`;
         } else if (longQuizButton.checked) {
-            scoreParagraph.innerText = `${score} / 20`; // update displayed value
+            scoreParagraph.innerText = `${score} / 20`;
         }
     } else {
         clickedButton.classList.add('incorrect');
@@ -281,6 +306,12 @@ function checkAnswer (clickedButton) {
     nextButton.classList.remove('hidden'); // Removes hidden class from next button when an option is clicked
 }
 
+/** This function is used when the next question is loaded. Both the values for the current
+ * question AND the current question index increase by 1. If the question index is less than the length 
+ * of the questions array, each option button has its disabled attribute removed, and the 'createOptions'
+ * and 'clearStatus' functions are called. If the end of the questions are reached, then the 'showResult'
+ * function is called instead.
+ */
 function nextQuestion () {
     currentQuestion++;
     currentQuestionIndex++;
@@ -297,7 +328,6 @@ function nextQuestion () {
 
         createOptions();
         clearStatus();
-
     } else {
         showResult();
     }
