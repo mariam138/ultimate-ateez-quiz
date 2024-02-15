@@ -338,3 +338,10 @@ I realised that having the index for options as "0" was causing the loop to crea
 
 - The background image and home page image of Ateez are both courtesy of KQ Entertainment
 - The group picture of Ateez on the results page is courtesy of Ateez's [Twitter/X](https://x.com/ATEEZofficial/status/1751216141756932114?s=20) account
+
+### Other Media
+
+- All icons used are from [Font Awesome](https://fontawesome.com/)
+- Fonts have been imported from [Google Fonts](https://fonts.google.com/)
+
+All other text and code was created by myself.
