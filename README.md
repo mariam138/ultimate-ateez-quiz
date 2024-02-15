@@ -170,6 +170,8 @@ After looking into the report, this was because of the size of the background im
 
 ### Accesibility Testing
 
+The accessibility was tested using WebAIM's accesibility testing tool, [WAVE](https://wave.webaim.org/report#/https://mariam138.github.io/ultimate-ateez-quiz/). Four errors were found: 1 error for an empty heading, and 3 errors for empty buttons. However, these empty elements were for the Final score heading on the results page, and the option buttons for the quiz. Both of these elements have text present once the quiz has started, but this was not recognised by the WAVE tool. For this reason, I have chosen to ignore these errors. No other errors were found on the website.
+
 ### Manual Testing
 
 ## Technologies Used
