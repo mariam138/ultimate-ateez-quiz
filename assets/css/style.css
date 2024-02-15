@@ -209,7 +209,7 @@ p {
 @media screen and (min-width: 768px) {
     #bg-image-div {
         background-image: url(../images/ateez-illusion-image.webp);
-        background-position: 0 20%;
+        /* background-position: 0 20%; */
     }
     
     /* Make fonts larger on larger screens */
@@ -286,5 +286,14 @@ p {
     /* Allows the modal boxes to take up less space on larger screens */
     .modal {
         padding: 12% 25%;
+    }
+}
+
+/* Media query for laptops and screens larger than 1024px */
+@media screen and (min-width: 1024px) {
+
+    /* Pushes the background image down so the top is not cut off */
+    #bg-image-div {
+        background-position: 0 20%;
     }
 }
