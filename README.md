@@ -145,6 +145,7 @@ A third feature would be to implement a timer to each question, maybe for a hard
     - No further errors are shown when no option buttons have been clicked during the quiz.
     - No further errors were present when the instructions modal, settings modal or exit modal were open. 
     - No further errors were shown on the results page, and the warning for an empty heading disappeared. 
+- The JavaScript code was validated using [JSHint](https://jshint.com/) by direct input. No errors were shown, however there were several warnings due to the fact that I had used syntax that is only avaible for ES6 onwards. Therefore, these warnings were ignored. The validtor highlighted an unused variable that had been declared, **scoreDiv**, and so this was removed from the JavaScript code.
 
 
 ### Lighthouse Testing
