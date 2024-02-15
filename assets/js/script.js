@@ -39,6 +39,10 @@ let closeQuizButton = document.getElementById('close-quiz-btn');
 let continueQuizButton = document.getElementById('continue-quiz-btn');
 const restartQuizButton = document.getElementById('restart-quiz-btn'); // Get restart button from DOM
 const homeButton = document.getElementById('home-btn'); // Get home button from DOM
+let currentQuestion = 1;
+let currentQuestionIndex = 0;
+let score = 0;
+let radioButton;
 
 //Questions, options and their correct answers for the quiz
 let questions = [{
@@ -162,13 +166,7 @@ backButtonOne.addEventListener('click', () => closeModal(instructionsModal));
 startButton.addEventListener('click', loadQuiz);
 
 
-let currentQuestion = 1;
-let currentQuestionIndex = 0;
-let score = 0;
 
-
-
-let radioButton;
 
 
 
