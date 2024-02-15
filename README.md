@@ -137,6 +137,13 @@ A third feature would be to implement a timer to each question, maybe for a hard
 
 ### Validation of Code
 
+- No errors were found with CSS when ran through the [W3C Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmariam138.github.io%2Fultimate-ateez-quiz%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en#css)
+
+- The HTML code was validated for each main feature of the quiz, as certain HTML elements are not present until the quiz is running.
+    - The HTML for the home page only showed one warning message, which was that there was an empty heading element. This empty heading element was for the final score of the quiz, which would remain empty until the very end. [Home Page validation](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmariam138.github.io%2Fultimate-ateez-quiz%2F)
+    - 
+
+
 ### Lighthouse Testing
 
 Using Lighthouse in Chrome's DevTools, the performance of the loading of the page was analysed.
