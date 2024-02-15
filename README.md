@@ -4,7 +4,9 @@
 
 ## Introduction
 
-A fun quiz game made to test your knowledge on the Kpop group called Ateez. Find out how well you know them!
+**The Ultimate Ateez Quiz** is a fun online quiz aimed at fans (known as **Atinys**) of the K-pop group **Ateez**, to test their knowledge and how much of a fan they are. It is built with a combination of HTML, CSS and JavaScript. Find out how well *you* know Ateez! 
+
+[Click here to view the live site!](https://mariam138.github.io/ultimate-ateez-quiz/)
 
 ## User Experience
 ### User Stories
