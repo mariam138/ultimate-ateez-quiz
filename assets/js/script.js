@@ -200,17 +200,17 @@ let questions = [{
     correctAnswer: "Seonghwa"
 },
 {
-    question: "Besides Hongjoong, who is the other main rapper?",
+    question: "Besides Hongjoong, who is the other main rapper in Ateez?",
     options: ["Yunho", "Mingi", "Wooyoung"],
     correctAnswer: "Mingi"
 },
 {
-    question: "What is the name of the current world tour Ateez is embarking on?",
+    question: "What is the name of the current world tour Ateez is embarking on as of 2024?",
     options: ["The Expedition Tour", "The Fellowship: Beginning of the End", "Towards the Light: Will to Power"],
     correctAnswer: "Towards the Light: Will to Power"
 },
 {
-    question: "What is the title track from the album The World EP1: Propaganda called?",
+    question: "What is the title track from the album 'The World EP1: Propaganda' called?",
     options: ["Guerrilla", "Crazy Form", "Turbulence"],
     correctAnswer: "Guerrilla"
 },
@@ -225,12 +225,12 @@ let questions = [{
     correctAnswer: "13"
 },
 {
-    question: "In 2020, Atinys voted to choose the title track for Zero:Fever Part 1. Which song won the vote?",
+    question: "In 2020, Atinys voted to choose the title track for 'Zero:Fever Part 1'. Which song won the vote?",
     options: ["Inception", "Thanxx", "Fever"],
     correctAnswer: "Inception"
 },
 {
-    question: "Who has been named as the ambassador of their local town, Namhae?",
+    question: "Who has been named as the ambassador of their home town, Namhae?",
     options: ["Yunho", "San", "Jongho"],
     correctAnswer: "San"
 }];
