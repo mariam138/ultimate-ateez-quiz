@@ -53,7 +53,7 @@ let questionArea = document.getElementById('question-area');
 let currentQuestion = 1;
 let currentQuestionIndex = 0;
 let score = 0;
-let scoreDiv = document.getElementById('score-div');
+
 
 const radioButtons = document.querySelectorAll('input[name="quiz-length"]');
 let radioButton;
