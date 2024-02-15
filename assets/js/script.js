@@ -10,111 +10,35 @@ let settingsModal = document.getElementById('settings-modal');
 let settingsModalButton = document.getElementById('settings-btn');
 // Get button that will close settings modal
 let backButtonTwo = document.getElementsByClassName('back-button')[1];
-
-function openModal(modal) {
-    modal.style.display = "block";
-}
-
-function closeModal(modal) {
-    modal.style.display = "none";
-}
-
-// Anonymous functions, shortened with arrow functions, used to call the openModal and closeModal functions
-// Code adapted from https://www.javascripttutorial.net/javascript-anonymous-functions/
-settingsModalButton.addEventListener('click', () => openModal(settingsModal));
-backButtonTwo.addEventListener('click', () => closeModal(settingsModal));
-instructionsModalButton.addEventListener('click', () => openModal(instructionsModal));
-backButtonOne.addEventListener('click', () => closeModal(instructionsModal));
-
-// When the start button is pressed, the loadQuiz function is called
+// Get start button that starts the quiz
 let startButton = document.getElementById('start-button');
-startButton.addEventListener('click', loadQuiz);
-
+// Get quiz area from DOM
 let quizArea = document.getElementById('quiz-area');
+// Get questions area from DOM
 let questionArea = document.getElementById('question-area');
-let currentQuestion = 1;
-let currentQuestionIndex = 0;
-let score = 0;
-
-
 const radioButtons = document.querySelectorAll('input[name="quiz-length"]');
-let radioButton;
 let shortQuizButton = document.getElementById('short-quiz');
 let longQuizButton = document.getElementById('long-quiz');
 let scoreParagraph = document.getElementById('score-paragraph');
-
-
-
-/** When the start button is pressed
- * this function will load the quiz in the
- * question area
- */
-function loadQuiz() {
-    // Hide content of the quiz area div
-    quizArea.style.display = "none";
-
-    // Display the question area div
-    questionArea.style.display = "flex";
-
-    resultsArea.classList.add('hidden');
-
-    optionsArea.style.display = "flex";
-    optionsArea.style.flexDirection = "column";
-    optionsArea.style.alignItems = "center";
-
-    currentQuestion = 1;
-    score = 0;
-
-    clearStatus();
-    shuffleQuestions(questions); // This will shuffle the questions each time the quiz is (re)loaded
-    chooseQuizLength();
-
-    questionArea.innerHTML = `<h1>Question ${currentQuestion}</h1>
-    <h2>${questions[currentQuestionIndex].question}</h2>`;
-   
-    createOptions();
-    for (let i = 0; i < optionButtons.length; i++) {
-        optionButtons[i].removeAttribute('disabled');
-    }
-
-  
-}
-
-/** A for loop is used to iterate through the optionButtons array
- * and create the option buttons text, using the options array in the
- * questions objects.
- */
-function createOptions() {
-
-    //Shuffle the order the options are shown each time a question is loaded
-    shuffleQuestions(optionButtons);
-    for (let i = 0; i < 3; i++) {
-        optionButtons[i].innerHTML = `${questions[currentQuestionIndex].options[i]}`;
-    }
-
-}
-
-
-function chooseQuizLength () {
-    if (shortQuizButton.checked){
-        currentQuestionIndex = 10;
-        scoreParagraph.innerText = `${score} / 10`;
-    } else if (longQuizButton.checked) {
-        currentQuestionIndex = 0;
-        scoreParagraph.innerText = `${score} / 20`;
-    }
-}
-
-for (radioButton of radioButtons) {
-    radioButton.addEventListener('change', chooseQuizLength);
-}
-
 let optionsArea = document.getElementById('options-area');
 let optionOne = document.getElementById('option-one');
 let optionTwo = document.getElementById('option-two');
 let optionThree = document.getElementById('option-three');
 let optionButtons = [optionOne, optionTwo, optionThree];
 let nextButton = document.getElementById('next-button');
+let resultsArea = document.getElementById('results-area');
+let finalScore = document.getElementById('final-score');
+let finalScoreComment = document.getElementById('score-comment');
+// Get exit quiz modal from DOM
+let exitModal = document.getElementById('exit-modal');
+// Get button that opens exit modal
+let exitModalButton = document.getElementById('exit-button');
+// Get button that will leave the quiz
+let closeQuizButton = document.getElementById('close-quiz-btn');
+// Get button that will close the exit modal and return to quiz
+let continueQuizButton = document.getElementById('continue-quiz-btn');
+const restartQuizButton = document.getElementById('restart-quiz-btn'); // Get restart button from DOM
+const homeButton = document.getElementById('home-btn'); // Get home button from DOM
 
 //Questions, options and their correct answers for the quiz
 let questions = [{
@@ -217,6 +141,107 @@ let questions = [{
     correctAnswer: "San"
 }];
 
+
+function openModal(modal) {
+    modal.style.display = "block";
+}
+
+function closeModal(modal) {
+    modal.style.display = "none";
+}
+
+// Anonymous functions, shortened with arrow functions, used to call the openModal and closeModal functions
+// Code adapted from https://www.javascripttutorial.net/javascript-anonymous-functions/
+settingsModalButton.addEventListener('click', () => openModal(settingsModal));
+backButtonTwo.addEventListener('click', () => closeModal(settingsModal));
+instructionsModalButton.addEventListener('click', () => openModal(instructionsModal));
+backButtonOne.addEventListener('click', () => closeModal(instructionsModal));
+
+// When the start button is pressed, the loadQuiz function is called
+
+startButton.addEventListener('click', loadQuiz);
+
+
+let currentQuestion = 1;
+let currentQuestionIndex = 0;
+let score = 0;
+
+
+
+let radioButton;
+
+
+
+
+/** When the start button is pressed
+ * this function will load the quiz in the
+ * question area
+ */
+function loadQuiz() {
+    // Hide content of the quiz area div
+    quizArea.style.display = "none";
+
+    // Display the question area div
+    questionArea.style.display = "flex";
+
+    resultsArea.classList.add('hidden');
+
+    optionsArea.style.display = "flex";
+    optionsArea.style.flexDirection = "column";
+    optionsArea.style.alignItems = "center";
+
+    currentQuestion = 1;
+    score = 0;
+
+    clearStatus();
+    shuffleQuestions(questions); // This will shuffle the questions each time the quiz is (re)loaded
+    chooseQuizLength();
+
+    questionArea.innerHTML = `<h1>Question ${currentQuestion}</h1>
+    <h2>${questions[currentQuestionIndex].question}</h2>`;
+   
+    createOptions();
+    for (let i = 0; i < optionButtons.length; i++) {
+        optionButtons[i].removeAttribute('disabled');
+    }
+
+  
+}
+
+/** A for loop is used to iterate through the optionButtons array
+ * and create the option buttons text, using the options array in the
+ * questions objects.
+ */
+function createOptions() {
+
+    //Shuffle the order the options are shown each time a question is loaded
+    shuffleQuestions(optionButtons);
+    for (let i = 0; i < 3; i++) {
+        optionButtons[i].innerHTML = `${questions[currentQuestionIndex].options[i]}`;
+    }
+
+}
+
+
+function chooseQuizLength () {
+    if (shortQuizButton.checked){
+        currentQuestionIndex = 10;
+        scoreParagraph.innerText = `${score} / 10`;
+    } else if (longQuizButton.checked) {
+        currentQuestionIndex = 0;
+        scoreParagraph.innerText = `${score} / 20`;
+    }
+}
+
+for (radioButton of radioButtons) {
+    radioButton.addEventListener('change', chooseQuizLength);
+}
+
+
+
+
+
+
 /** This function will shuffle any array that is passed through to it, using the Fisher-Yates
  * algorithm. In this case, this function will be called to shuffle the quiz questions
  * each time the quiz is started or reloaded. Code adapted from:
@@ -302,9 +327,7 @@ optionsArea.addEventListener('click', optionsClickHandler);
 // Add event listener to nextButton
 nextButton.addEventListener('click', nextQuestion);
 
-let resultsArea = document.getElementById('results-area');
-let finalScore = document.getElementById('final-score');
-let finalScoreComment = document.getElementById('score-comment');
+
 
 /** This function will close the question and options area
  * and show the results area instead. The final score is displayed.
@@ -341,26 +364,12 @@ function showResult() {
     }
 }
 
-// Get exit quiz modal from DOM
-let exitModal = document.getElementById('exit-modal');
-// Get button that opens exit modal
-let exitModalButton = document.getElementById('exit-button');
-// Get button that will leave the quiz
-let closeQuizButton = document.getElementById('close-quiz-btn');
-// Get button that will close the exit modal and return to quiz
-let continueQuizButton = document.getElementById('continue-quiz-btn');
 
-// Opens exit modal
-// exitModalButton.onclick = function openExitModal (e) {
-//     exitModal.style.display = "block";
-// };
+
 
 exitModalButton.addEventListener('click', () => openModal(exitModal));
 continueQuizButton.addEventListener('click', () => closeModal(exitModal));
-// Closes exit modal and continues quiz
-// continueQuizButton.onclick = function (e) {
-//     exitModal.style.display = "none";
-// };
+
 // Closes exit modal and exits quiz, going back to the home page
 closeQuizButton.addEventListener('click', exitQuiz);
 
@@ -392,8 +401,7 @@ function clearStatus() {
     nextButton.classList.add('hidden');
 }
 
-const restartQuizButton = document.getElementById('restart-quiz-btn'); // Get restart button from DOM
-const homeButton = document.getElementById('home-btn'); // Get home button from DOM
+
 
 restartQuizButton.addEventListener('click', loadQuiz); // Will restart the quiz when the restart button is clicked
 homeButton.addEventListener('click', exitQuiz); // Will go back to the landing page when the home button is clicked
