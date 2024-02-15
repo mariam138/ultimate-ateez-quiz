@@ -154,23 +154,6 @@ function closeModal(modal) {
     modal.style.display = "none";
 }
 
-// Anonymous functions, shortened with arrow functions, used to call the openModal and closeModal functions
-// Code adapted from https://www.javascripttutorial.net/javascript-anonymous-functions/
-settingsModalButton.addEventListener('click', () => openModal(settingsModal));
-backButtonTwo.addEventListener('click', () => closeModal(settingsModal));
-instructionsModalButton.addEventListener('click', () => openModal(instructionsModal));
-backButtonOne.addEventListener('click', () => closeModal(instructionsModal));
-
-// When the start button is pressed, the loadQuiz function is called
-
-startButton.addEventListener('click', loadQuiz);
-
-
-
-
-
-
-
 /** When the start button is pressed
  * this function will load the quiz in the
  * question area
@@ -202,8 +185,6 @@ function loadQuiz() {
     for (let i = 0; i < optionButtons.length; i++) {
         optionButtons[i].removeAttribute('disabled');
     }
-
-  
 }
 
 /** A for loop is used to iterate through the optionButtons array
@@ -211,15 +192,12 @@ function loadQuiz() {
  * questions objects.
  */
 function createOptions() {
-
     //Shuffle the order the options are shown each time a question is loaded
     shuffleQuestions(optionButtons);
     for (let i = 0; i < 3; i++) {
         optionButtons[i].innerHTML = `${questions[currentQuestionIndex].options[i]}`;
     }
-
 }
-
 
 function chooseQuizLength () {
     if (shortQuizButton.checked){
@@ -230,15 +208,6 @@ function chooseQuizLength () {
         scoreParagraph.innerText = `${score} / 20`;
     }
 }
-
-for (radioButton of radioButtons) {
-    radioButton.addEventListener('change', chooseQuizLength);
-}
-
-
-
-
-
 
 /** This function will shuffle any array that is passed through to it, using the Fisher-Yates
  * algorithm. In this case, this function will be called to shuffle the quiz questions
@@ -263,7 +232,6 @@ function optionsClickHandler(e) {
             optionButtons[i].setAttribute('disabled', true);
         }
     }
-
 }
 
 /** This function when called will check whether the option clicked on is the right answer
@@ -273,7 +241,6 @@ function optionsClickHandler(e) {
  * to the next question.
  */
 function checkAnswer (clickedButton) {
-    
     if (clickedButton.innerText === questions[currentQuestionIndex].correctAnswer) {
         clickedButton.classList.add('correct');
         score++; // increase score by 1
@@ -291,12 +258,10 @@ function checkAnswer (clickedButton) {
             }
         }
     }
-    
     nextButton.classList.remove('hidden'); // Removes hidden class from next button when an option is clicked
 }
 
 function nextQuestion () {
-
     currentQuestion++;
     currentQuestionIndex++;
 
@@ -316,16 +281,7 @@ function nextQuestion () {
     } else {
         showResult();
     }
-   
-
 }
-
-// Add event listener to optionsArea
-optionsArea.addEventListener('click', optionsClickHandler);
-// Add event listener to nextButton
-nextButton.addEventListener('click', nextQuestion);
-
-
 
 /** This function will close the question and options area
  * and show the results area instead. The final score is displayed.
@@ -362,15 +318,6 @@ function showResult() {
     }
 }
 
-
-
-
-exitModalButton.addEventListener('click', () => openModal(exitModal));
-continueQuizButton.addEventListener('click', () => closeModal(exitModal));
-
-// Closes exit modal and exits quiz, going back to the home page
-closeQuizButton.addEventListener('click', exitQuiz);
-
 /** When the closeQuizButton is clicked, this will hide the two containers for the quiz
  * and load up the start page again. It will also close the exit modal.
  * When the Home button is clicked on the results page,
@@ -398,6 +345,69 @@ function clearStatus() {
     // Hides the next button again when quiz starts or is reloaded
     nextButton.classList.add('hidden');
 }
+
+// Anonymous functions, shortened with arrow functions, used to call the openModal and closeModal functions
+// Code adapted from https://www.javascripttutorial.net/javascript-anonymous-functions/
+settingsModalButton.addEventListener('click', () => openModal(settingsModal));
+backButtonTwo.addEventListener('click', () => closeModal(settingsModal));
+instructionsModalButton.addEventListener('click', () => openModal(instructionsModal));
+backButtonOne.addEventListener('click', () => closeModal(instructionsModal));
+
+// When the start button is pressed, the loadQuiz function is called
+
+startButton.addEventListener('click', loadQuiz);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+for (radioButton of radioButtons) {
+    radioButton.addEventListener('change', chooseQuizLength);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Add event listener to optionsArea
+optionsArea.addEventListener('click', optionsClickHandler);
+// Add event listener to nextButton
+nextButton.addEventListener('click', nextQuestion);
+
+
+
+
+
+
+
+
+exitModalButton.addEventListener('click', () => openModal(exitModal));
+continueQuizButton.addEventListener('click', () => closeModal(exitModal));
+
+// Closes exit modal and exits quiz, going back to the home page
+closeQuizButton.addEventListener('click', exitQuiz);
+
+
+
+
 
 
 
