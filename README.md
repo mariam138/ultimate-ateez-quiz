@@ -133,6 +133,8 @@ The second feature I would like to implement is adding a dark/night mode to the 
 
 A third feature would be to implement a timer to each question, maybe for a harder setting for the quiz. On each question, the user would have a 10 second timer counting down at the top. If the user does not choose in time, the correct answer would be shown but their score would not go up.
 
+A fourth feature to be included would be a progress bar at the top of the quiz, to indicate to the user how far along into the quiz they are. The progress could be displayed as a percentage, with a progress bar that fills up as the quiz goes along.
+
 ## Testing
 
 ### Validation of Code
