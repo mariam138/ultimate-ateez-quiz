@@ -164,7 +164,9 @@ On mobile, the initial performance scored 78.
 
 ![Screenshot 2024-02-14 at 21 16 31](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/ecddf5be-5182-4d86-8830-85908d820514)
 
-After looking into the report, this was because of the size of the background image.
+After looking into the report, this was because of the size of the background image. To improve performance, I reduced the size of the background image for mobile phones by 100px and performed the lighthouse test again. This led to a performance of 91.
+
+![Screenshot 2024-02-15 at 13 52 36](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/85701dd0-7773-46e6-b70d-e5c4a2e39e82)
 
 ### Accesibility Testing
 
