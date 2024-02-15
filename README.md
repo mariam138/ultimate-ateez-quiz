@@ -68,11 +68,11 @@ To produce wireframes for the quiz, I used Balsamiq. The wireframes helped me ha
 
 ### Home Page
 
-The home page features a group picture of ateez as the background with a bright blue plain background which fits in with the colour scheme. Underneath the title quiz is another group picture of Ateez, which is responsive. Underneath the picture is the tagline **"How well do you know Ateez?"**, followed by some more paragraph text. Underneath the text there are three buttons: one to start the quiz, one for the instructions on how the quiz works and lastly one to change the settings of the game. 
+The home page features a group picture of ateez in the background with a bright blue plain background colour, which fits in with the colour scheme. Underneath the title quiz is another group picture of Ateez, which is responsive. Underneath the picture is the tagline **"How well do you know Ateez?"**, followed by some more paragraph text. Underneath the text there are three buttons: one to start the quiz, one for the instructions on how the quiz works and lastly, one to change the settings of the game. 
 
 ![Screenshot 2024-02-14 at 19 43 48](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/df240062-119f-458f-a1d9-f0ccda902673)
 
-On larger screens, hovering the mouse over the buttons will change their colour with a slight transition. The blue **"Start!"** button will change into a lighter blue and enlarge slightly, while the **"Instructions"** and **"Settings"** buttons change their background colour to black and the text to yellow. This is to indicate clickability, but also to separate the **"Start!"** button from the others visually, to indicate it has a different action. 
+On larger screens, hovering the mouse over the buttons will change their colour with a slight transition. The blue **"Start!"** button will change into a lighter blue and enlarge slightly, while the **"Instructions"** and **"Settings"** buttons change their background colour to black and the text to yellow. This is to indicate clickability, but also to separate the **"Start!"** button from the others visually, indicating it has a different action. 
 
 ![Screenshot 2024-02-14 at 19 55 45](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/94f541ce-2640-49ed-91f6-957f23baf3c0)
 ![Screenshot 2024-02-14 at 19 55 55](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/3d962b15-f7b6-4438-a958-c6e9cf47df30)
@@ -81,16 +81,15 @@ On larger screens, hovering the mouse over the buttons will change their colour 
 
 When clicking on the **Instructions** button, a modal appears explaining briefly how the game will work.
 
-![Screenshot 2024-02-14 at 20 06 03](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/902cc9af-06b0-4203-80b5-8f283253f5a7)
+![Screenshot 2024-02-15 at 21 07 58](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/a450c8cf-ee91-4e23-b8c4-06e1d94fc0cc)
 
 Clicking the **"Back"** button will close the modal and return to the home page. 
 
 Clicking on the **Settings** button will open a modal, allowing you to choose between a longer quiz of 20 questions, or a shorter quiz of 10 questions.
 
-![Screenshot 2024-02-14 at 20 09 22](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/5e2ea1d4-7d55-4b84-bca5-d7133e746961)
- Again, pressing the **Back** button will take you back to the home page.
+![Screenshot 2024-02-15 at 21 08 26](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/4978babe-3cc8-45b1-b594-1062c6f9b680)
 
- Clicking the **Start** buttion leads straight into the quiz.
+ Again, pressing the **Back** button will take you back to the home page. Clicking the **Start** buttion leads straight into the quiz.
 
  ### Quiz Section
 
