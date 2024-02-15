@@ -1,6 +1,6 @@
 # The Ultimate Ateez Quiz
 
-![Screenshot 2024-02-15 at 12 53 18](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/86397f97-c99f-4af5-bbcc-22a6ce16e6dd)
+![Screenshot 2024-02-15 at 21 03 45](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/bc670fde-65aa-4d44-88cb-e2b22894851e)
 
 ## Introduction
 
@@ -171,7 +171,6 @@ A fifth feature to be introduced to the quiz would be keyboard events.
     - No further errors were shown on the results page, and the warning for an empty heading disappeared. 
     - No errors were shown when validating the [404 page](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fmariam138.github.io%2Fultimate-ateez-quiz%2F404.html)
 - The JavaScript code was validated using [JSHint](https://jshint.com/) by direct input. No errors were shown, however there were several warnings due to the fact that I had used syntax that is only avaible for ES6 onwards. Therefore, these warnings were ignored. The validtor highlighted an unused variable that had been declared, **scoreDiv**, and so this was removed from the JavaScript code.
-
 
 ### Lighthouse Testing
 
