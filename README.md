@@ -11,6 +11,17 @@
 ## User Experience
 ### User Stories
 
+- As a user, I want to be able to test my knowledge on Ateez
+- As a user, I want to get visual feedback on my answers
+- As a user, I want to be able to choose how long I spend playing the quiz
+- As a user, I want to see what my final score is and how that ranks me as a fan
+- As a user, I want to be able to leave the quiz whenever I want to
+
+- As a site owner, I want to create a fun quiz on the K-pop group ateez
+- As a site owner, I want people to take interest in Ateez through the quiz questions
+- As a site owner, I want the quiz to be easily navigated to keep the interest of any users
+
+
 ## Design
 ### Colour Scheme
 
