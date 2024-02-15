@@ -333,3 +333,8 @@ I realised that having the index for options as "0" was causing the loop to crea
 - Code to add listener events to multiple elements simultaneously is adapted from [fjolt.com](https://fjolt.com/article/javascript-multiple-elements-addeventlistener)
 - Code to shuffle the questions for the quiz is adapted from [Bro Code](https://www.youtube.com/watch?v=FGAUekwri1Q&list=WL&index=2) on Youtube
 - Code to use anonymous functions in my modal functions is adapted from [javascripttutorial.net](https://www.javascripttutorial.net/javascript-anonymous-functions/)
+
+### Images
+
+- The background image and home page image of Ateez are both courtesy of KQ Entertainment
+- The group picture of Ateez on the results page is courtesy of Ateez's [Twitter/X](https://x.com/ATEEZofficial/status/1751216141756932114?s=20) account
