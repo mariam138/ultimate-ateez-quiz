@@ -302,6 +302,12 @@ p {
     #home-404-btn:visited {
         color: black;
     }
+
+    /* Makes link visible when hovered over */
+    #home-404-btn:hover {
+        color: #faf932;
+        background-color: black;
+    }
 }
 
 /* Media query for laptops and screens larger than 1024px */
