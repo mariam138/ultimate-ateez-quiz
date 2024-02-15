@@ -137,6 +137,14 @@ Clicking on the **Play again?** button will reload the quiz and start from the b
 ![Screenshot 2024-02-14 at 20 42 08](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/0631dd82-d4f7-461f-914e-5ec257c6a55e)
 ![Screenshot 2024-02-14 at 20 42 18](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/36e937c3-d2ba-4760-9380-24bd555b048e)
 
+### 404 Page
+
+In case the user enters the wrong address into the address bar, I have created a 404 page. 
+
+![Screenshot 2024-02-15 at 19 12 46](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/9bc8c48e-c96c-44ea-b7a8-418b0ea4b4de)
+
+A message is displayed stating that the page could not be found. A **Home** button is displayed underneath to guide the user back to the Home page. This also has a hover effect where the colours are changed.
+
 ### Future Features
 
 The first feature I would like to implement is adding a score board to the game, using the window's local storage. This would allow the user to enter a name or a nickname if they wished. If they didn't want to enter a name, then a randomly generated one would be used in their place on the score board. The scores would show either out of 10 or out of 20, depending on the quiz length chosen. Alternatively, two seperate score boards could be made, one for the long quiz and one for the short quiz. 
