@@ -169,6 +169,7 @@ A fifth feature to be introduced to the quiz would be keyboard events.
     - No further errors are shown when no option buttons have been clicked during the quiz.
     - No further errors were present when the instructions modal, settings modal or exit modal were open. 
     - No further errors were shown on the results page, and the warning for an empty heading disappeared. 
+    - No errors were shown when validating the [404 page](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fmariam138.github.io%2Fultimate-ateez-quiz%2F404.html)
 - The JavaScript code was validated using [JSHint](https://jshint.com/) by direct input. No errors were shown, however there were several warnings due to the fact that I had used syntax that is only avaible for ES6 onwards. Therefore, these warnings were ignored. The validtor highlighted an unused variable that had been declared, **scoreDiv**, and so this was removed from the JavaScript code.
 
 
