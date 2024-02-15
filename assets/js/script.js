@@ -391,11 +391,10 @@ function clearStatus() {
         optionButtons[i].classList.remove('correct');
         optionButtons[i].classList.remove('incorrect');
     }
-    
+
     // Hides the next button again when quiz starts or is reloaded
     nextButton.classList.add('hidden');
 }
-
 
 // Event Listeners
 
@@ -405,24 +404,24 @@ settingsModalButton.addEventListener('click', () => openModal(settingsModal));
 backButtonTwo.addEventListener('click', () => closeModal(settingsModal));
 instructionsModalButton.addEventListener('click', () => openModal(instructionsModal));
 backButtonOne.addEventListener('click', () => closeModal(instructionsModal));
-
 // When the start button is pressed, the loadQuiz function is called
 startButton.addEventListener('click', loadQuiz);
-
+// Loops through the radio buttons to apply an event listener whenever a change event occurs
+// When a change event occurs, the 'chooseQuizLength' function is called
 for (radioButton of radioButtons) {
     radioButton.addEventListener('change', chooseQuizLength);
 }
-
-// Add event listener to optionsArea
+// When an option is clicked, the 'optionsClickHandler' function is called
+// This event handler is applied using event delegation, onto the parent element of the option buttons
 optionsArea.addEventListener('click', optionsClickHandler);
-// Add event listener to nextButton
+// calls 'nextQuestion' function when the nextButton is clicked
 nextButton.addEventListener('click', nextQuestion);
-
+// Event handlers to open/close the exit modal, using anonymous functions to call the 'openModal/closeModal' functions
 exitModalButton.addEventListener('click', () => openModal(exitModal));
 continueQuizButton.addEventListener('click', () => closeModal(exitModal));
-
 // Closes exit modal and exits quiz, going back to the home page
 closeQuizButton.addEventListener('click', exitQuiz);
-
-restartQuizButton.addEventListener('click', loadQuiz); // Will restart the quiz when the restart button is clicked
-homeButton.addEventListener('click', exitQuiz); // Will go back to the landing page when the home button is clicked
+// Will restart the quiz when the restart button is clicked
+restartQuizButton.addEventListener('click', loadQuiz);
+// Will go back to the landing page when the home button is clicked
+homeButton.addEventListener('click', exitQuiz);
