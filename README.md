@@ -139,9 +139,12 @@ A third feature would be to implement a timer to each question, maybe for a hard
 
 - No errors were found with CSS when ran through the [W3C Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmariam138.github.io%2Fultimate-ateez-quiz%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en#css)
 
-- The HTML code was validated for each main feature of the quiz, as certain HTML elements are not present until the quiz is running.
+- The HTML code was validated for each main feature of the quiz, as certain HTML elements are not present until the quiz is running. Validation of the HTML code throughout different stages of the quiz was done by copying the relevant HTML code from Chrome's DevTools and pasting into the [W3 Validator](https://validator.w3.org/).
     - The HTML for the home page only showed one warning message, which was that there was an empty heading element. This empty heading element was for the final score of the quiz, which would remain empty until the very end. [Home Page validation](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmariam138.github.io%2Fultimate-ateez-quiz%2F)
-    - 
+    - During the quiz, once a button is clicked, they then become disabled. In the JavaScript, this is done by looping through the buttons and adding a **"disabled = true"** attribute. This showed as an error in the validation, stating *"Bad value true for attribute disabled on element button."* After [reading](https://www.c-sharpcorner.com/article/understanding-the-disabled-attribute-in-html/) how the **disabled** attribute is usually used in HTML, it appears that only writing **disabled** is needed, without the **"= true"** part. This did not flag up any errors in the validator. However, as I have written it explicitly in the JavaScript as **disabled = true**, I cannot change this in the HTML, so these errors have been chosen to be ignored.
+    - No further errors are shown when no option buttons have been clicked during the quiz.
+    - No further errors were present when the instructions modal, settings modal or exit modal were open. 
+    - No further errors were shown on the results page, and the warning for an empty heading disappeared. 
 
 
 ### Lighthouse Testing
