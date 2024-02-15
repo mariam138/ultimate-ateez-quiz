@@ -206,7 +206,7 @@ p {
 }
 
 /* Styling of the Home button on the 404 page */
-#error-message > a {
+#home-404-btn{
     width: 25%;
     align-self: center;
     text-decoration: none;
@@ -298,8 +298,8 @@ p {
     }
 
     /* Allow Home button link on 404 page to remain the same colour at all times */
-    #error-message > a:link,
-    #error-message > a:visited {
+    #home-404-btn:link,
+    #home-404-btn:visited {
         color: black;
     }
 }

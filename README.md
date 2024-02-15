@@ -21,7 +21,6 @@
 - As a site owner, I want people to take interest in Ateez through the quiz questions
 - As a site owner, I want the quiz to be easily navigated to keep the interest of any users
 
-
 ## Design
 ### Colour Scheme
 
@@ -147,6 +146,8 @@ The second feature I would like to implement is adding a dark/night mode to the 
 A third feature would be to implement a timer to each question, maybe for a harder setting for the quiz. On each question, the user would have a 10 second timer counting down at the top. If the user does not choose in time, the correct answer would be shown but their score would not go up.
 
 A fourth feature to be included would be a progress bar at the top of the quiz, to indicate to the user how far along into the quiz they are. The progress could be displayed as a percentage, with a progress bar that fills up as the quiz goes along.
+
+A fifth feature to be introduced to the quiz would be keyboard events. 
 
 ## Testing
 
@@ -281,9 +282,9 @@ Cloning the repository allows all files to be accessible on the local computer.
 
 ![Screenshot 2024-02-04 at 12 47 17](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/b518e577-6849-464d-b321-421c00123264)
 
-    After moving the `options-area` div inside the `quiz-area` div, then an error was thrown stating that the element with the id `options-area` was undefined. This turned out to be because I had set the 'innerHTML' iin the javascript, overwriting the `options-area` I had created in the HTML originally. To fix this, I created separate divs that would appear underneath the `quiz-area` div, and created a function that would show these divs when the quiz was loaded.
+After moving the `options-area` div inside the `quiz-area` div, then an error was thrown stating that the element with the id `options-area` was undefined. This turned out to be because I had set the 'innerHTML' iin the javascript, overwriting the `options-area` I had created in the HTML originally. To fix this, I created separate divs that would appear underneath the `quiz-area` div, and created a function that would show these divs when the quiz was loaded.
 
-2. Continuning on from the last bug fix, I then ran into an error when creating the `options-area` div as part of the `createOptions` function where the console was throwing a **"Reference Error"** stating that `optionsArea` had not been defined. After some googling on what a **Reference Error** means, I found that I had to re-declare the `optionsArea` valuable in the `createOptions` function due to its block scope.
+2. Continuing on from the last bug fix, I then ran into an error when creating the `options-area` div as part of the `createOptions` function where the console was throwing a **"Reference Error"** stating that `optionsArea` had not been defined. After some googling on what a **Reference Error** means, I found that I had to re-declare the `optionsArea` valuable in the `createOptions` function due to its block scope.
 
 3. When creating the buttons which contained the options for each question, I made a for loop. However, my initial code led to three buttons being created with the same answer. 
 
@@ -313,6 +314,6 @@ I realised that having the index for options as "0" was causing the loop to crea
 ### Code
 
 - Code to create modals is adapted from [W3 Schools](https://www.w3schools.com/howto/howto_css_modals.asp)
-- Code to add listener events to multiple elements simultaneously is adaptedd from [fjolt.com](https://fjolt.com/article/javascript-multiple-elements-addeventlistener)
+- Code to add listener events to multiple elements simultaneously is adapted from [fjolt.com](https://fjolt.com/article/javascript-multiple-elements-addeventlistener)
 - Code to shuffle the questions for the quiz is adapted from [Bro Code](https://www.youtube.com/watch?v=FGAUekwri1Q&list=WL&index=2) on Youtube
 - Code to use anonymous functions in my modal functions is adapted from [javascripttutorial.net](https://www.javascripttutorial.net/javascript-anonymous-functions/)
