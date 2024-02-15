@@ -297,7 +297,7 @@ function checkAnswer (clickedButton) {
     } else {
         clickedButton.classList.add('incorrect');
         // Highlights the correct answer if the incorrect answer is clicked
-        for (button of optionButtons) {
+        for (let button of optionButtons) {
             if (button.innerText === questions[currentQuestionIndex].correctAnswer) {
                 button.classList.add('correct');
             }
