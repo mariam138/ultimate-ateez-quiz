@@ -121,7 +121,7 @@ Clicking on the **Next** button then loads the next question. Any answers that h
 
 ### Results Page
 
-At the end of the quiz, the user's final score is shown, alongside a comment indicating how much of a fan of Ateez they are. There are four different comments depending on the score the user gets. 
+At the end of the quiz, the user's final score is shown, alongside a comment indicating how much of a fan of Ateez they are. Different comments are displayed depending on the score the user gets. 
 
 ![Screenshot 2024-02-14 at 20 35 24](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/aaebde2e-4f05-49c0-b822-f348755b92d8)
 
@@ -154,7 +154,7 @@ A third feature would be to implement a timer to each question, maybe for a hard
 
 A fourth feature to be included would be a progress bar at the top of the quiz, to indicate to the user how far along into the quiz they are. The progress could be displayed as a percentage, with a progress bar that fills up as the quiz goes along.
 
-A fifth feature to be introduced to the quiz would be keyboard events. 
+A fifth feature to be introduced to the quiz would be keyboard events. For example, if the user wanted to leave the quiz, they could press the 'Esc' key. To go to the next question, the 'Enter' key could be used, etc.
 
 ## Testing
 
@@ -169,7 +169,7 @@ A fifth feature to be introduced to the quiz would be keyboard events.
     - No further errors were present when the instructions modal, settings modal or exit modal were open. 
     - No further errors were shown on the results page, and the warning for an empty heading disappeared. 
     - No errors were shown when validating the [404 page](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fmariam138.github.io%2Fultimate-ateez-quiz%2F404.html)
-- The JavaScript code was validated using [JSHint](https://jshint.com/) by direct input. No errors were shown, however there were several warnings due to the fact that I had used syntax that is only avaible for ES6 onwards. Therefore, these warnings were ignored. The validtor highlighted an unused variable that had been declared, **scoreDiv**, and so this was removed from the JavaScript code.
+- The JavaScript code was validated using [JSHint](https://jshint.com/) by direct input. No errors were shown, however there were several warnings due to the fact that I had used syntax that is only avaible for ES6 onwards. Therefore, these warnings were ignored. The validator highlighted an unused variable that had been declared, **scoreDiv**, and so this was removed from the JavaScript code.
 
 ### Lighthouse Testing
 
@@ -266,7 +266,7 @@ For the testing of this project, both responsive features and the Javascript log
 
 ## Technologies Used
 
-To create the wireframes, **Balsamiq** was used. The quiz was created using **Gitpod**. 
+To create the wireframes, **Balsamiq** was used. The quiz was created using **Gitpod** using HTML, CSS and JavaScript.
 
 ## Deployment
 
@@ -296,11 +296,9 @@ Cloning the repository allows all files to be accessible on the local computer.
 
 ![Screenshot 2024-02-04 at 12 47 17](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/b518e577-6849-464d-b321-421c00123264)
 
-After moving the `options-area` div inside the `quiz-area` div, then an error was thrown stating that the element with the id `options-area` was undefined. This turned out to be because I had set the 'innerHTML' iin the javascript, overwriting the `options-area` I had created in the HTML originally. To fix this, I created separate divs that would appear underneath the `quiz-area` div, and created a function that would show these divs when the quiz was loaded.
+After moving the `options-area` div inside the `quiz-area` div, then an error was thrown stating that the element with the id `options-area` was undefined. This turned out to be because I had set the 'innerHTML' in the javascript, overwriting the `options-area` I had created in the HTML originally. To fix this, I created separate divs that would appear underneath the `quiz-area` div, and created a function that would show these divs when the quiz was loaded.
 
-2. Continuing on from the last bug fix, I then ran into an error when creating the `options-area` div as part of the `createOptions` function where the console was throwing a **"Reference Error"** stating that `optionsArea` had not been defined. After some googling on what a **Reference Error** means, I found that I had to re-declare the `optionsArea` valuable in the `createOptions` function due to its block scope.
-
-3. When creating the buttons which contained the options for each question, I made a for loop. However, my initial code led to three buttons being created with the same answer. 
+2. When creating the buttons which contained the options for each question, I made a for loop. However, my initial code led to three buttons being created with the same answer. 
 
 ![Screenshot 2024-02-04 at 16 12 32](https://github.com/mariam138/ultimate-ateez-quiz/assets/150139337/0bba9175-b13c-4a78-bfe5-fd151b61d6c3)
 
@@ -317,11 +315,11 @@ My initial code was written as follows:
 
 I realised that having the index for options as "0" was causing the loop to create three buttons with the first answer in the options array. Changing it to [i] allowed it to create three buttons each with three different options.
 
-4. After creating the buttons, I wanted to add click events to them all to create a *"CheckAnswer"* function. When I declared the **"optionButtons"** variable outside of the **"createOptions"** function and logged the node list to the console, it gave a length of 0. I realised that this was because the separate option buttons were being created inside the function, giving them **function scope**. By declaring **"optionButton"** as an empty variable *outside* the **"createOptions"** function, this allowed it to have a global scope. Logging the array of the option buttons to the console then worked, giving a length of 3.
+3. After creating the buttons, I wanted to add click events to them all to create a *"CheckAnswer"* function. When I declared the **"optionButtons"** variable outside of the **"createOptions"** function and logged the node list to the console, it gave a length of 0. I realised that this was because the separate option buttons were being created inside the function, giving them **function scope**. Instead, I created the button elements in the HTML and left them empty. This allowed the event handler to work.
 
-5. To allow the user to only have the option of clicking one of the option buttons, I added `{once:true}` to the event handler. However, after adding the exit and next buttons underneath the quiz, this feature seemed to also affect these buttons, even though the click event was only on the **options-area div**. So when clicking on the exit button first, then going back into the quiz from the modal, none of the option buttons were responding to the click event again. To stop this, I added **"e.stopPropagation()"** to the click events for the **exitModalButton** and **continueQuizButton**.
+4. To allow the user to only have the option of clicking one of the option buttons, I added `{once:true}` to the event handler. However, after adding the exit and next buttons underneath the quiz, this feature seemed to also affect these buttons, even though the click event was only on the **options-area div**. So when clicking on the exit button first, then going back into the quiz from the modal, none of the option buttons were responding to the click event again. To stop this, I instead used the **"disabled"** attribute with javascript, applied only to the option buttons. 
 
-6. When looping through the quiz questions, whenever the correct answer was clicked, rather than the score increasing by 1 , it would increase by the index of the question number. When logging the text for the clicked button and the corresponding correct answer, these both matches, but the console continued to log them an increasing number of times each question. This was why the score was increasing exponentially. This turned out to be because I had accidentally added multiple event listeners to the option buttons. To fix this, one event listener with the function **checkAnswer** was defined and declared outside of any functions created so that it was only called once. 
+5. When looping through the quiz questions, whenever the correct answer was clicked, rather than the score increasing by 1 , it would increase by the index of the question number. When logging the text for the clicked button and the corresponding correct answer, these both matched, but the console continued to log them an increasing number of times each question. This was why the score was increasing exponentially. This turned out to be because I had accidentally added multiple event listeners to the option buttons. To fix this, one event listener with the function **checkAnswer** was defined and declared outside of any functions created so that it was only called once. 
 
 ## Credits
 
