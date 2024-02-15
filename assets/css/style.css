@@ -46,7 +46,7 @@ p {
     /* Move image to bottom of screen and have matching background colour */
     width: 100vw;
     height: 100vh;
-    background: #76f9fb url(../images/ateez-illusion-image-700w.webp) no-repeat 0 bottom / 100%;
+    background: #76f9fb url(../images/ateez-illusion-image-600w.webp) no-repeat 0 bottom / 100%;
 }
 
 .container {
