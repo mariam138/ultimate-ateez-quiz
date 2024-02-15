@@ -18,18 +18,29 @@ let startButton = document.getElementById('start-button');
 let quizArea = document.getElementById('quiz-area');
 // Get questions area from DOM
 let questionArea = document.getElementById('question-area');
+// Get radio buttons list from Settings modal
 const radioButtons = document.querySelectorAll('input[name="quiz-length"]');
+// Get radio button which will select the short quiz
 let shortQuizButton = document.getElementById('short-quiz');
+// Get radio button which will select the long quiz
 let longQuizButton = document.getElementById('long-quiz');
+// Get the paragraph which will display the current score during the quiz
 let scoreParagraph = document.getElementById('score-paragraph');
+// Get options are div where option buttons will be displayed
 let optionsArea = document.getElementById('options-area');
+// Get each option button from the DOM
 let optionOne = document.getElementById('option-one');
 let optionTwo = document.getElementById('option-two');
 let optionThree = document.getElementById('option-three');
+// Create an array with the option buttons
 let optionButtons = [optionOne, optionTwo, optionThree];
+// Get button that will load the next question
 let nextButton = document.getElementById('next-button');
+// Get the results area div which will show the final score at the end of the quiz
 let resultsArea = document.getElementById('results-area');
+// Get header that will display the final score
 let finalScore = document.getElementById('final-score');
+// Get the paragraph which will display the corresponding comment for the user's score
 let finalScoreComment = document.getElementById('score-comment');
 // Get exit quiz modal from DOM
 let exitModal = document.getElementById('exit-modal');
@@ -39,11 +50,17 @@ let exitModalButton = document.getElementById('exit-button');
 let closeQuizButton = document.getElementById('close-quiz-btn');
 // Get button that will close the exit modal and return to quiz
 let continueQuizButton = document.getElementById('continue-quiz-btn');
-const restartQuizButton = document.getElementById('restart-quiz-btn'); // Get restart button from DOM
-const homeButton = document.getElementById('home-btn'); // Get home button from DOM
+// Get restart button from DOM
+const restartQuizButton = document.getElementById('restart-quiz-btn');
+// Get home button from DOM
+const homeButton = document.getElementById('home-btn');
+// Set the current question to 1 at the start of the quiz
 let currentQuestion = 1;
+// Set the current question index to 0 at the start of the quiz
 let currentQuestionIndex = 0;
+// Set the score to 0 at the start of the quiz
 let score = 0;
+// Create an empty variable for a radio button to be used later in a function
 let radioButton;
 
 //Questions, options and their correct answers for the quiz
