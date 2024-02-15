@@ -205,6 +205,13 @@ p {
     margin-bottom: 3%;
 }
 
+/* Styling of the Home button on the 404 page */
+#error-message > a {
+    width: 25%;
+    align-self: center;
+    text-decoration: none;
+}
+
 /* Media query for tablet sizes and up */
 @media screen and (min-width: 768px) {
     #bg-image-div {
@@ -288,6 +295,12 @@ p {
     /* Allows the modal boxes to take up less space on larger screens */
     .modal {
         padding: 12% 25%;
+    }
+
+    /* Allow Home button link on 404 page to remain the same colour at all times */
+    #error-message > a:link,
+    #error-message > a:visited {
+        color: black;
     }
 }
 
